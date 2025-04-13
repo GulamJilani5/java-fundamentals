@@ -1,0 +1,222 @@
+=============================================================================================================
+========================================
+=========arrays
+
+   -An array is a container that holds a fixed number of elements of a single type (e.g., int, String,
+     or any object type).
+   -Arrays are objects in Java, so they are allocated on the heap and can be null.
+   -Arrays are ** immutable in size once created (their length cannot change), but their elements can be modified.
+
+
+=============================================================================================================
+========================================
+=========java.lang.Object
+
+        length (Field)
+        clone()
+        equals(Object obj)
+        hashCode()
+        toString()
+        notify()
+        wait()
+
+=============================================================================================================
+========================================
+=========java.util.Arrays
+
+      Comparison Methods
+      equals(boolean[] a, boolean[] a2) – Checks if two boolean arrays are equal (same length and elements).
+      equals(byte[] a, byte[] a2) – Checks if two byte arrays are equal.
+      equals(char[] a, char[] a2) – Checks if two char arrays are equal.
+      equals(double[] a, double[] a2) – Checks if two double arrays are equal.
+      equals(float[] a, float[] a2) – Checks if two float arrays are equal.
+      equals(int[] a, int[] a2) – Checks if two int arrays are equal.
+      equals(long[] a, long[] a2) – Checks if two long arrays are equal.
+      equals(Object[] a, Object[] a2) – Checks if two object arrays are equal (uses Object.equals() for elements).
+      equals(short[] a, short[] a2) – Checks if two short arrays are equal.
+      equals(boolean[] a, int aFromIndex, int aToIndex, boolean[] b, int bFromIndex, int bToIndex) – Checks if specified ranges of two boolean arrays are equal (Java 9+).
+      equals(byte[] a, int aFromIndex, int aToIndex, byte[] b, int bFromIndex, int bToIndex) – Checks ranges of byte arrays (Java 9+).
+      equals(char[] a, int aFromIndex, int aToIndex, char[] b, int bFromIndex, int bToIndex) – Checks ranges of char arrays (Java 9+).
+      equals(double[] a, int aFromIndex, int aToIndex, double[] b, int bFromIndex, int bToIndex) – Checks ranges of double arrays (Java 9+).
+      equals(float[] a, int aFromIndex, int aToIndex, float[] b, int bFromIndex, int bToIndex) – Checks ranges of float arrays (Java 9+).
+      equals(int[] a, int aFromIndex, int aToIndex, int[] b, int bFromIndex, int bToIndex) – Checks ranges of int arrays (Java 9+).
+      equals(long[] a, int aFromIndex, int aToIndex, long[] b, int bFromIndex, int bToIndex) – Checks ranges of long arrays (Java 9+).
+      equals(Object[] a, int aFromIndex, int aToIndex, Object[] b, int bFromIndex, int bToIndex) – Checks ranges of object arrays (Java 9+).
+      equals(short[] a, int aFromIndex, int aToIndex, short[] b, int bFromIndex, int bToIndex) – Checks ranges of short arrays (Java 9+).
+      equals(T[] a, T[] a2, Comparator<? super T> cmp) – Checks if two object arrays are equal using a custom Comparator (Java 8+).
+      equals(T[] a, int aFromIndex, int aToIndex, T[] b, int bFromIndex, int bToIndex, Comparator<? super T> cmp) – Checks ranges of object arrays using a Comparator (Java 9+).
+      Hash Code Methods
+      hashCode(boolean[] a) – Computes a hash code for a boolean array based on its elements.
+      hashCode(byte[] a) – Computes a hash code for a byte array.
+      hashCode(char[] a) – Computes a hash code for a char array.
+      hashCode(double[] a) – Computes a hash code for a double array.
+      hashCode(float[] a) – Computes a hash code for a float array.
+      hashCode(int[] a) – Computes a hash code for an int array.
+      hashCode(long[] a) – Computes a hash code for a long array.
+      hashCode(Object[] a) – Computes a hash code for an object array.
+      hashCode(short[] a) – Computes a hash code for a short array.
+      String Representation Methods
+      toString(boolean[] a) – Returns a string representation of a boolean array (e.g., "[true, false]").
+      toString(byte[] a) – Returns a string representation of a byte array.
+      toString(char[] a) – Returns a string representation of a char array.
+      toString(double[] a) – Returns a string representation of a double array.
+      toString(float[] a) – Returns a string representation of a float array.
+      toString(int[] a) – Returns a string representation of an int array.
+      toString(long[] a) – Returns a string representation of a long array.
+      toString(Object[] a) – Returns a string representation of an object array.
+      toString(short[] a) – Returns a string representation of a short array.
+      Deep Comparison, Hash Code, and String Representation (for Multi-Dimensional Arrays)
+      deepEquals(Object[] a1, Object[] a2) – Checks if two arrays (including nested arrays) are deeply equal.
+      deepHashCode(Object[] a) – Computes a hash code for an array, including nested arrays.
+      deepToString(Object[] a) – Returns a string representation of an array, including nested arrays (e.g., "[[1, 2], [3, 4]]").
+      Sorting Methods
+      sort(byte[] a) – Sorts a byte array in ascending order.
+      sort(byte[] a, int fromIndex, int toIndex) – Sorts a range of a byte array.
+      sort(char[] a) – Sorts a char array.
+      sort(char[] a, int fromIndex, int toIndex) – Sorts a range of a char array.
+      sort(double[] a) – Sorts a double array.
+      sort(double[] a, int fromIndex, int toIndex) – Sorts a range of a double array.
+      sort(float[] a) – Sorts a float array.
+      sort(float[] a, int fromIndex, int toIndex) – Sorts a range of a float array.
+      sort(int[] a) – Sorts an int array.
+      sort(int[] a, int fromIndex, int toIndex) – Sorts a range of an int array.
+      sort(long[] a) – Sorts a long array.
+      sort(long[] a, int fromIndex, int toIndex) – Sorts a range of a long array.
+      sort(Object[] a) – Sorts an object array (elements must implement Comparable).
+      sort(Object[] a, int fromIndex, int toIndex) – Sorts a range of an object array.
+      sort(short[] a) – Sorts a short array.
+      sort(short[] a, int fromIndex, int toIndex) – Sorts a range of a short array.
+      sort(T[] a, Comparator<? super T> c) – Sorts an object array using a custom Comparator.
+      sort(T[] a, int fromIndex, int toIndex, Comparator<? super T> c) – Sorts a range of an object array using a Comparator.
+      Parallel Sorting Methods
+      parallelSort(byte[] a) – Sorts a byte array in parallel (Java 8+).
+      parallelSort(byte[] a, int fromIndex, int toIndex) – Sorts a range of a byte array in parallel.
+      parallelSort(char[] a) – Sorts a char array in parallel.
+      parallelSort(char[] a, int fromIndex, int toIndex) – Sorts a range of a char array in parallel.
+      parallelSort(double[] a) – Sorts a double array in parallel.
+      parallelSort(double[] a, int fromIndex, int toIndex) – Sorts a range of a double array in parallel.
+      parallelSort(float[] a) – Sorts a float array in parallel.
+      parallelSort(float[] a, int fromIndex, int toIndex) – Sorts a range of a float array in parallel.
+      parallelSort(int[] a) – Sorts an int array in parallel.
+      parallelSort(int[] a, int fromIndex, int toIndex) – Sorts a range of an int array in parallel.
+      parallelSort(long[] a) – Sorts a long array in parallel.
+      parallelSort(long[] a, int fromIndex, int toIndex) – Sorts a range of a long array in parallel.
+      parallelSort(T[] a) – Sorts an object array in parallel (elements must implement Comparable).
+      parallelSort(T[] a, int fromIndex, int toIndex) – Sorts a range of an object array in parallel.
+      parallelSort(T[] a, Comparator<? super T> cmp) – Sorts an object array in parallel using a Comparator.
+      parallelSort(T[] a, int fromIndex, int toIndex, Comparator<? super T> cmp) – Sorts a range of an object array in parallel using a Comparator.
+      Binary Search Methods
+      binarySearch(byte[] a, byte key) – Searches for a key in a sorted byte array.
+      binarySearch(byte[] a, int fromIndex, int toIndex, byte key) – Searches a range of a sorted byte array.
+      binarySearch(char[] a, char key) – Searches for a key in a sorted char array.
+      binarySearch(char[] a, int fromIndex, int toIndex, char key) – Searches a range of a sorted char array.
+      binarySearch(double[] a, double key) – Searches for a key in a sorted double array.
+      binarySearch(double[] a, int fromIndex, int toIndex, double key) – Searches a range of a sorted double array.
+      binarySearch(float[] a, float key) – Searches for a key in a sorted float array.
+      binarySearch(float[] a, int fromIndex, int toIndex, float key) – Searches a range of a sorted float array.
+      binarySearch(int[] a, int key) – Searches for a key in a sorted int array.
+      binarySearch(int[] a, int fromIndex, int toIndex, int key) – Searches a range of a sorted int array.
+      binarySearch(long[] a, long key) – Searches for a key in a sorted long array.
+      binarySearch(long[] a, int fromIndex, int toIndex, long key) – Searches a range of a sorted long array.
+      binarySearch(Object[] a, Object key) – Searches for a key in a sorted object array.
+      binarySearch(Object[] a, int fromIndex, int toIndex, Object key) – Searches a range of a sorted object array.
+      binarySearch(short[] a, short key) – Searches for a key in a sorted short array.
+      binarySearch(short[] a, int fromIndex, int toIndex, short key) – Searches a range of a sorted short array.
+      binarySearch(T[] a, T key, Comparator<? super T> c) – Searches for a key in a sorted object array using a Comparator.
+      binarySearch(T[] a, int fromIndex, int toIndex, T key, Comparator<? super T> c) – Searches a range of a sorted object array using a Comparator.
+      Filling Methods
+      fill(boolean[] a, boolean val) – Fills a boolean array with the specified value.
+      fill(boolean[] a, int fromIndex, int toIndex, boolean val) – Fills a range of a boolean array.
+      fill(byte[] a, byte val) – Fills a byte array.
+      fill(byte[] a, int fromIndex, int toIndex, byte val) – Fills a range of a byte array.
+      fill(char[] a, char val) – Fills a char array.
+      fill(char[] a, int fromIndex, int toIndex, char val) – Fills a range of a char array.
+      fill(double[] a, double val) – Fills a double array.
+      fill(double[] a, int fromIndex, int toIndex, double val) – Fills a range of a double array.
+      fill(float[] a, float val) – Fills a float array.
+      fill(float[] a, int fromIndex, int toIndex, float val) – Fills a range of a float array.
+      fill(int[] a, int val) – Fills an int array.
+      fill(int[] a, int fromIndex, int toIndex, int val) – Fills a range of an int array.
+      fill(long[] a, long val) – Fills a long array.
+      fill(long[] a, int fromIndex, int toIndex, long val) – Fills a range of a long array.
+      fill(Object[] a, Object val) – Fills an object array.
+      fill(Object[] a, int fromIndex, int toIndex, Object val) – Fills a range of an object array.
+      fill(short[] a, short val) – Fills a short array.
+      fill(short[] a, int fromIndex, int toIndex, short val) – Fills a range of a short array.
+      Copying Methods
+      copyOf(boolean[] original, int newLength) – Copies a boolean array to a new array of specified length.
+      copyOf(byte[] original, int newLength) – Copies a byte array.
+      copyOf(char[] original, int newLength) – Copies a char array.
+      copyOf(double[] original, int newLength) – Copies a double array.
+      copyOf(float[] original, int newLength) – Copies a float array.
+      copyOf(int[] original, int newLength) – Copies an int array.
+      copyOf(long[] original, int newLength) – Copies a long array.
+      copyOf(short[] original, int newLength) – Copies a short array.
+      copyOf(T[] original, int newLength) – Copies an object array.
+      copyOfRange(boolean[] original, int from, int to) – Copies a range of a boolean array.
+      copyOfRange(byte[] original, int from, int to) – Copies a range of a byte array.
+      copyOfRange(char[] original, int from, int to) – Copies a range of a char array.
+      copyOfRange(double[] original, int from, int to) – Copies a range of a double array.
+      copyOfRange(float[] original, int from, int to) – Copies a range of a float array.
+      copyOfRange(int[] original, int from, int to) – Copies a range of an int array.
+      copyOfRange(long[] original, int from, int to) – Copies a range of a long array.
+      copyOfRange(short[] original, int from, int to) – Copies a range of a short array.
+      copyOfRange(T[] original, int from, int to) – Copies a range of an object array.
+      Stream Conversion Methods
+      stream(double[] array) – Converts a double array to a DoubleStream (Java 8+).
+      stream(double[] array, int startInclusive, int endExclusive) – Converts a range of a double array to a DoubleStream.
+      stream(int[] array) – Converts an int array to an IntStream.
+      stream(int[] array, int startInclusive, int endExclusive) – Converts a range of an int array to an IntStream.
+      stream(long[] array) – Converts a long array to a LongStream.
+      stream(long[] array, int startInclusive, int endExclusive) – Converts a range of a long array to a LongStream.
+      stream(T[] array) – Converts an object array to a Stream<T>.
+      stream(T[] array, int startInclusive, int endExclusive) – Converts a range of an object array to a Stream<T>.
+      Mismatching Methods
+      mismatch(boolean[] a, boolean[] b) – Finds the index of the first mismatch between two boolean arrays (Java 9+).
+      mismatch(boolean[] a, int aFromIndex, int aToIndex, boolean[] b, int bFromIndex, int bToIndex) – Finds the index of the first mismatch in ranges of boolean arrays (Java 9+).
+      mismatch(byte[] a, byte[] b) – Finds the index of the first mismatch between byte arrays.
+      mismatch(byte[] a, int aFromIndex, int aToIndex, byte[] b, int bFromIndex, int bToIndex) – Finds the index of the first mismatch in ranges of byte arrays.
+      mismatch(char[] a, char[] b) – Finds the index of the first mismatch between char arrays.
+      mismatch(char[] a, int aFromIndex, int aToIndex, char[] b, int bFromIndex, int bToIndex) – Finds the index of the first mismatch in ranges of char arrays.
+      mismatch(double[] a, double[] b) – Finds the index of the first mismatch between double arrays.
+      mismatch(double[] a, int aFromIndex, int aToIndex, double[] b, int bFromIndex, int bToIndex) – Finds the index of the first mismatch in ranges of double arrays.
+      mismatch(float[] a, float[] b) – Finds the index of the first mismatch between float arrays.
+      mismatch(float[] a, int aFromIndex, int aToIndex, float[] b, int bFromIndex, int bToIndex) – Finds the index of the first mismatch in ranges of float arrays.
+      mismatch(int[] a, int[] b) – Finds the index of the first mismatch between int arrays.
+      mismatch(int[] a, int aFromIndex, int aToIndex, int[] b, int bFromIndex, int bToIndex) – Finds the index of the first mismatch in ranges of int arrays.
+      mismatch(long[] a, long[] b) – Finds the index of the first mismatch between long arrays.
+      mismatch(long[] a, int aFromIndex, int aToIndex, long[] b, int bFromIndex, int bToIndex) – Finds the index of the first mismatch in ranges of long arrays.
+      mismatch(Object[] a, Object[] b) – Finds the index of the first mismatch between object arrays.
+      mismatch(Object[] a, int aFromIndex, int aToIndex, Object[] b, int bFromIndex, int bToIndex) – Finds the index of the first mismatch in ranges of object arrays.
+      mismatch(T[] a, T[] b, Comparator<? super T> cmp) – Finds the index of the first mismatch between object arrays using a Comparator (Java 9+).
+      mismatch(T[] a, int aFromIndex, int aToIndex, T[] b, int bFromIndex, int bToIndex, Comparator<? super T> cmp) – Finds the index of the first mismatch in ranges of object arrays using a Comparator.
+      Spliterator Methods
+      spliterator(double[] array) – Creates a Spliterator.OfDouble for a double array (Java 8+).
+      spliterator(double[] array, int startInclusive, int endExclusive) – Creates a Spliterator.OfDouble for a range of a double array.
+      spliterator(int[] array) – Creates a Spliterator.OfInt for an int array.
+      spliterator(int[] array, int startInclusive, int endExclusive) – Creates a Spliterator.OfInt for a range of an int array.
+      spliterator(long[] array) – Creates a Spliterator.OfLong for a long array.
+      spliterator(long[] array, int startInclusive, int endExclusive) – Creates a Spliterator.OfLong for a range of a long array.
+      spliterator(T[] array) – Creates a Spliterator<T> for an object array.
+      spliterator(T[] array, int startInclusive, int endExclusive) – Creates a Spliterator<T> for a range of an object array.
+      Set All Methods
+      setAll(double[] array, IntToDoubleFunction generator) – Sets all elements of a double array using a generator function (Java 8+).
+      setAll(int[] array, IntUnaryOperator generator) – Sets all elements of an int array using a generator function.
+      setAll(long[] array, IntToLongFunction generator) – Sets all elements of a long array using a generator function.
+      setAll(T[] array, IntFunction<? extends T> generator) – Sets all elements of an object array using a generator function.
+      Parallel Set All Methods
+      parallelSetAll(double[] array, IntToDoubleFunction generator) – Sets all elements of a double array in parallel (Java 8+).
+      parallelSetAll(int[] array, IntUnaryOperator generator) – Sets all elements of an int array in parallel.
+      parallelSetAll(long[] array, IntToLongFunction generator) – Sets all elements of a long array in parallel.
+      parallelSetAll(T[] array, IntFunction<? extends T> generator) – Sets all elements of an object array in parallel.
+      Parallel Prefix Methods
+      parallelPrefix(double[] array, DoubleBinaryOperator op) – Computes a parallel prefix (cumulative operation) on a double array (Java 8+).
+      parallelPrefix(double[] array, int fromIndex, int toIndex, DoubleBinaryOperator op) – Computes a parallel prefix on a range of a double array.
+      parallelPrefix(int[] array, IntBinaryOperator op) – Computes a parallel prefix on an int array.
+      parallelPrefix(int[] array, int fromIndex, int toIndex, IntBinaryOperator op) – Computes a parallel prefix on a range of an int array.
+      parallelPrefix(long[] array, LongBinaryOperator op) – Computes a parallel prefix on a long array.
+      parallelPrefix(long[] array, int fromIndex, int toIndex, LongBinaryOperator op) – Computes a parallel prefix on a range of a long array.
+      parallelPrefix(T[] array, BinaryOperator<T> op) – Computes a parallel prefix on an object array.
+      parallelPrefix(T[] array, int fromIndex, int toIndex, BinaryOperator<T> op) – Computes a parallel prefix on a range of an object array.
+      As List Method
+      asList(T... a) – Returns a fixed-size List backed by the specified array.
