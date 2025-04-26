@@ -96,57 +96,46 @@ All the Methods:
          especially in loops or when appending frequently.
 
     All the Methods:
-      append(boolean b) – Appends a boolean.
-      append(char c) – Appends a char.
-      append(char[] str) – Appends a char array.
-      append(char[] str, int offset, int len) – Appends a portion of a char array.
-      append(CharSequence s) – Appends a CharSequence.
-      append(CharSequence s, int start, int end) – Appends a portion of a CharSequence.
-      append(double d) – Appends a double.
-      append(float f) – Appends a float.
-      append(int i) – Appends an int.
-      append(long lng) – Appends a long.
-      append(Object obj) – Appends an object.
-      append(String str) – Appends a string.
-      append(StringBuffer sb) – Appends a StringBuffer.
+      Append
+      append()
       appendCodePoint(int codePoint) – Appends a Unicode code point.
+
       capacity() – Returns the current capacity.
+
       charAt(int index)* – Returns the character at the specified index.
       codePointAt(int index)* – Returns the Unicode code point at the specified index.
       codePointBefore(int index)* – Returns the Unicode code point before the specified index.
       codePointCount(int beginIndex, int endIndex)* – Returns the number of Unicode code points in the range.
+
       delete(int start, int end) – Removes characters from start to end - 1.
       deleteCharAt(int index) – Removes the character at the specified index.
+
       ensureCapacity(int minimumCapacity) – Ensures the capacity is at least the specified value.
+
       getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)* – Copies characters to a char array.
+
       indexOf(String str)* – Returns the index of the first occurrence of str.
-      indexOf(String str, int fromIndex)* – Returns the index of the first occurrence of str starting from fromIndex.
-      insert(int offset, boolean b) – Inserts a boolean at the specified offset.
-      insert(int offset, char c) – Inserts a char at the specified offset.
-      insert(int offset, char[] str) – Inserts a char array at the specified offset.
-      insert(int index, char[] str, int offset, int len) – Inserts a portion of a char array at the specified index.
-      insert(int offset, CharSequence s) – Inserts a CharSequence at the specified offset.
-      insert(int offset, CharSequence s, int start, int end) – Inserts a portion of a CharSequence at the specified offset.
-      insert(int offset, double d) – Inserts a double at the specified offset.
-      insert(int offset, float f) – Inserts a float at the specified offset.
-      insert(int offset, int i) – Inserts an int at the specified offset.
-      insert(int offset, long l) – Inserts a long at the specified offset.
-      insert(int offset, Object obj) – Inserts an object at the specified offset.
-      insert(int offset, String str) – Inserts a string at the specified offset.
+
       lastIndexOf(String str)* – Returns the index of the last occurrence of str.
       lastIndexOf(String str, int fromIndex)* – Returns the index of the last occurrence of str starting backward from fromIndex.
-      length()* – Returns the current length.
+
       offsetByCodePoints(int index, int codePointOffset)* – Returns the index offset by the specified number of code points.
+
       replace(int start, int end, String str) – Replaces characters from start to end - 1 with str.
       reverse() – Reverses the sequence of characters.
+
       setCharAt(int index, char ch) – Sets the character at the specified index.
       setLength(int newLength) – Sets the length (truncates or pads with null characters).
+
       substring(int start)* – Returns a substring from start to the end (as a String).
       substring(int start, int end)* – Returns a substring from start to end - 1 (as a String).
+
       toString()* – Converts the StringBuilder to a String.
+
       trimToSize() – Reduces the capacity to the current length.
+
       Common Methods: 14 methods marked with (*) are shared with String and StringBuffer: charAt(), codePointAt(), codePointBefore(), codePointCount(), getChars(), indexOf() (both variants), lastIndexOf() (both variants), length(), offsetByCodePoints(), substring() (both variants), toString().
-      Total: ~49 methods (including overloads).
+
 
 =============================================================================================================
 ========================================
@@ -156,57 +145,44 @@ All the Methods:
       -Slightly slower than StringBuilder due to synchronization overhead.
 
      All the methods:
-        append(boolean b) – Appends a boolean.
-        append(char c) – Appends a char.
-        append(char[] str) – Appends a char array.
-        append(char[] str, int offset, int len) – Appends a portion of a char array.
-        append(CharSequence s) – Appends a CharSequence.
-        append(CharSequence s, int start, int end) – Appends a portion of a CharSequence.
-        append(double d) – Appends a double.
-        append(float f) – Appends a float.
-        append(int i) – Appends an int.
-        append(long lng) – Appends a long.
-        append(Object obj) – Appends an object.
-        append(String str) – Appends a string.
-        append(StringBuffer sb) – Appends a StringBuffer.
-        appendCodePoint(int codePoint) – Appends a Unicode code point.
+        append()
+
         capacity() – Returns the current capacity.
+
         charAt(int index)* – Returns the character at the specified index.
         codePointAt(int index)* – Returns the Unicode code point at the specified index.
         codePointBefore(int index)* – Returns the Unicode code point before the specified index.
         codePointCount(int beginIndex, int endIndex)* – Returns the number of Unicode code points in the range.
+
         delete(int start, int end) – Removes characters from start to end - 1.
         deleteCharAt(int index) – Removes the character at the specified index.
+
         ensureCapacity(int minimumCapacity) – Ensures the capacity is at least the specified value.
         getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)* – Copies characters to a char array.
-        indexOf(String str)* – Returns the index of the first occurrence of str.
-        indexOf(String str, int fromIndex)* – Returns the index of the first occurrence of str starting from fromIndex.
-        insert(int offset, boolean b) – Inserts a boolean at the specified offset.
-        insert(int offset, char c) – Inserts a char at the specified offset.
-        insert(int offset, char[] str) – Inserts a char array at the specified offset.
-        insert(int index, char[] str, int offset, int len) – Inserts a portion of a char array at the specified index.
-        insert(int offset, CharSequence s) – Inserts a CharSequence at the specified offset.
-        insert(int offset, CharSequence s, int start, int end) – Inserts a portion of a CharSequence at the specified offset.
-        insert(int offset, double d) – Inserts a double at the specified offset.
-        insert(int offset, float f) – Inserts a float at the specified offset.
-        insert(int offset, int i) – Inserts an int at the specified offset.
-        insert(int offset, long l) – Inserts a long at the specified offset.
-        insert(int offset, Object obj) – Inserts an object at the specified offset.
-        insert(int offset, String str) – Inserts a string at the specified offset.
+        indexOf()
+
+        insert()
+
         lastIndexOf(String str)* – Returns the index of the last occurrence of str.
         lastIndexOf(String str, int fromIndex)* – Returns the index of the last occurrence of str starting backward from fromIndex.
-        length()* – Returns the current length.
+
         offsetByCodePoints(int index, int codePointOffset)* – Returns the index offset by the specified number of code points.
+
         replace(int start, int end, String str) – Replaces characters from start to end - 1 with str.
+
         reverse() – Reverses the sequence of characters.
+
         setCharAt(int index, char ch) – Sets the character at the specified index.
         setLength(int newLength) – Sets the length (truncates or pads with null characters).
-        substring(int start)* – Returns a substring from start to the end (as a String).
-        substring(int start, int end)* – Returns a substring from start to end - 1 (as a String).
-        toString()* – Converts the StringBuffer to a String.
+
+        substring()*
+
+        toString()*
+
         trimToSize() – Reduces the capacity to the current length.
+
         Common Methods: 14 methods marked with (*) are shared with String and StringBuilder: charAt(), codePointAt(), codePointBefore(), codePointCount(), getChars(), indexOf() (both variants), lastIndexOf() (both variants), length(), offsetByCodePoints(), substring() (both variants), toString().
-        Total: ~49 methods (including overloads).
+
 
 
  ==============================================================================================
