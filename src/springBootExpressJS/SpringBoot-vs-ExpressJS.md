@@ -37,7 +37,7 @@
 
 ### Example Flow
   ##### A GET /users/:id request would flow like:
-➡️ **Client Request**  
+✅ **Client Request**  
   ↓  
 ➡️ **Route** (`userRoutes.js`)  
   → Matches the endpoint and attaches middleware + controller  
@@ -49,7 +49,7 @@
   → Handles the request:
     - Calls the appropriate **Service** function
     - Gets data back
-   - **Sends the response**  
+     **This controller Sends the response**  
   ↓  
 ➡️ **Service** (`userService.js`)  
   → Contains business logic
