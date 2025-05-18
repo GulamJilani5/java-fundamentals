@@ -48,13 +48,13 @@
   ↓  
 ➡️ **Controller** (`userController.js`)  
   → Handles the request:  
-    •Calls the appropriate **Service** function  
-    •Gets data back  
-    •**This controller sends the response**  
+    -Calls the appropriate **Service** function  
+    -Gets data back  
+    -**This controller sends the response**  
   ↓  
 ➡️ **Service** (`userService.js`)  
   → Contains business logic  
-    •Calls the appropriate **Model** for DB operations  
+    -Calls the appropriate **Model** for DB operations  
   ↓  
 ➡️ **Model** (`userModel.js`)  
   → Interacts with the **database**  
