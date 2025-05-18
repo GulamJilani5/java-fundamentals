@@ -1,6 +1,10 @@
 🔴🔵☑️✔️ ➡️ ✓→•←⁕⁂※⁜‣
 
+<<<<<<< HEAD
 # Different Ways To Loop Over The String
+=======
+# Different ways to loop over the string
+>>>>>>> bfd064290b2f072778833de30047c3c4bd932f56
 
 ### ➡️1) Using a for Loop with charAt()
      String str = "Hello";
