@@ -35,30 +35,32 @@
     •Service → runs the business logic
     •Model → interacts with the database
 
-### Example Flow
-  ##### A GET /users/:id request would flow like:
+Example Flow  
+A `GET /users/:id` request would flow like:
+
 ✅ **Client Request**  
-  ↓  
+↓  
 ➡️ **Route** (`userRoutes.js`)  
-  → Matches the endpoint and attaches middleware + controller  
-  ↓  
+→ Matches the endpoint and attaches middleware + controller  
+↓  
 ➡️ **Middleware** (`authMiddleware.js`, etc.)  
-  → CORS / Authenticates / logs / modifies request  
-  ↓  
+→ CORS / Authenticates / logs / modifies request  
+↓  
 ➡️ **Controller** (`userController.js`)  
-  → Handles the request:
-      •Calls the appropriate **Service** function
-      •Gets data back
-    **•This controller Sends the response**  
+→ Handles the request:
+- Calls the appropriate **Service** function
+- Gets data back
+- **This controller sends the response**  
   ↓  
-➡️ **Service** (`userService.js`)  
+  ➡️ **Service** (`userService.js`)  
   → Contains business logic
-    •Calls the appropriate **Model** for DB operations  
+- Calls the appropriate **Model** for DB operations  
   ↓  
-➡️ **Model** (`userModel.js`)  
+  ➡️ **Model** (`userModel.js`)  
   → Interacts with the **database**  
   ↓  
-➡️ **Database returns data** to Model → Service → Controller  
+  ➡️ **Database returns data** to Model → Service → Controller  
   ↓  
-✅ **Controller sends the response back to the client**
+  ✅ **Controller sends the response back to the client**
+
 
