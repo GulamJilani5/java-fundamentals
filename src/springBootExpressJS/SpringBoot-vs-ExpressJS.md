@@ -50,7 +50,7 @@
   → Handles the request:  
 &nbsp;&nbsp;&nbsp;&nbsp;•Calls the appropriate **Service** function  
 &nbsp;&nbsp;&nbsp;&nbsp;•Gets data back  
-&nbsp;&nbsp;&nbsp;&nbsp;•**This controller sends the response**  
+&nbsp;&nbsp;&nbsp;&nbsp;•**...This controller sends the response**  
   ↓  
 ➡️ **Service** (`userService.js`)  
   → Contains business logic  
@@ -62,7 +62,7 @@
 ➡️ **Database**  
   → Returns data to Model → Service → Controller  
   ↓  
-✅ **Controller sends the response back to the client**
+✅ **Controller sends the response back to the client...**
 
 
 
