@@ -14,8 +14,7 @@
               •IntStream.range(1, 10)
               •LongStream.rangeClosed(1, 10)
 
-🔴🔵☑️✔️ ➡️
-✓→•←⁕⁂※⁜‣
+
 
  # Intermediate Operations
   
