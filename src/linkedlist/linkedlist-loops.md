@@ -1,6 +1,6 @@
 🔴🔵☑️✔️ ➡️ ✓→•←⁕⁂※⁜‣
 
-# Different ways to loop over
+# Different Ways To Loop Over
 
  ### ➡️1. Using forEach(Consumer action) (Java 8+)
       linkedList.forEach(item -> System.out.println(item));

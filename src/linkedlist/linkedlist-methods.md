@@ -1,9 +1,9 @@
 🔴🔵☑️✔️ ➡️ ✓→•←⁕⁂※⁜‣
 
-# Creation and Initialization
+# Creation And Initialization
      LinkedList<Type> list = new LinkedList<>();
 
-# Different Methods in LinekdList
+# Different Methods In LinekdList
 ### ➡️Add
       •add(E e)                  // Add to end
       •add(int index, E element) // Add at index

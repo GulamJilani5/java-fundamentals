@@ -153,11 +153,11 @@
            – Returns an Optional<String> for constant description (Java 12+).
    ##### •resolveConstantDesc(MethodHandles.Lookup lookup) 
          – Resolves the string as a constant (Java 12+).
-   ##### •Common Methods: 14 methods marked with (*) are shared with StringBuilder and StringBuffer: charAt(), codePointAt(), codePointBefore(), codePointCount(), getChars(), indexOf() (all variants), lastIndexOf() (all variants), length(), offsetByCodePoints(), substring() (both variants), toString().
-   ##### •Total: ~70 methods (including overloads and static methods).
+•Common Methods: 14 methods marked with (*) are shared with StringBuilder and StringBuffer: charAt(), codePointAt(), codePointBefore(), codePointCount(), getChars(), indexOf() (all variants), lastIndexOf() (all variants), length(), offsetByCodePoints(), substring() (both variants), toString().
+•Total: ~70 methods (including overloads and static methods).
+•These methods are exclusive to the String class and work identically for both literals and objects.
+•Since String is immutable, methods like replace() or toUpperCase() return a new String rather than modifying the original.
 
-   ##### These methods are exclusive to the String class and work identically for both literals and objects.
-   ##### Since String is immutable, methods like replace() or toUpperCase() return a new String rather than modifying the original.
 
 
 ### ➡️ 2) StringBuilder (Mutable)
@@ -213,7 +213,10 @@
             – Converts the StringBuilder to a String.
 ##### •   trimToSize() 
             – Reduces the capacity to the current length.
-##### •   Common Methods: 14 methods marked with (*) are shared with String and StringBuffer: charAt(), codePointAt(), codePointBefore(), codePointCount(), getChars(), indexOf() (both variants), lastIndexOf() (both variants), length(), offsetByCodePoints(), substring() (both variants), toString().
+• Common Methods: 14 methods marked with (*) are shared with String and StringBuffer: charAt(), 
+  codePointAt(), codePointBefore(), codePointCount(), getChars(), indexOf() (both variants), lastIndexOf()
+  (both variants), length(), offsetByCodePoints(), substring() (both variants), toString().
+
 
 ### ➡️ 3) StringBuffer (Mutable)
       -thread-safe, making it suitable for multi-threaded environments.
@@ -272,12 +275,12 @@
 
    ##### • trimToSize() 
             – Reduces the capacity to the current length.
-   #####  Common Methods: 14 methods marked with (*) are shared with String and StringBuilder: charAt(), 
-   #####   codePointAt(), codePointBefore(), codePointCount(), getChars(), indexOf() (both variants), 
-   #####   lastIndexOf() (both variants), length(), offsetByCodePoints(), substring() (both variants), toString().
+• Common Methods: 14 methods marked with (*) are shared with String and StringBuilder: charAt(), 
+  codePointAt(), codePointBefore(), codePointCount(), getChars(), indexOf() (both variants), 
+  lastIndexOf() (both variants), length(), offsetByCodePoints(), substring() (both variants), toString().
 
 
- ### 14 methods common to String, StringBuilder, and StringBuffer are:
+ ### 14 Methods Common To String, StringBuilder, and StringBuffer are:
   ###### •charAt(int index)
   ###### •codePointAt(int index)
   ###### •codePointBefore(int index)

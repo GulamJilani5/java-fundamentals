@@ -1,6 +1,6 @@
 🔴🔵☑️✔️ ➡️ ✓→•←⁕⁂※⁜‣
 
-# Different ways to create Arraylist
+# Different Ways To Create Arraylist
 
  ### ➡️1) Basic Creation - Generic ArrayList (with type specification):
     import java.util.ArrayList;
@@ -22,12 +22,12 @@
     boolean addAll(Collection<? extends E> c): Appends all elements from the specified collection to the end.
 
 ### ➡️2) Accessing Elements
-  •E get(int index): Returns the element at the specified index
-        String item = list.get(0); // Gets element at index 0
-  •int indexOf(Object o): Returns the index of the first occurrence of the specified element, or -1 if not found.
-        int index = list.indexOf("Apple"); // Returns index of "Apple"
-  •int lastIndexOf(Object o): Returns the index of the last occurrence of the element, or -1 if not found.
-        int lastIndex = list.lastIndexOf("Apple");
+      •E get(int index): Returns the element at the specified index
+            String item = list.get(0); // Gets element at index 0
+      •int indexOf(Object o): Returns the index of the first occurrence of the specified element, or -1 if not found.
+            int index = list.indexOf("Apple"); // Returns index of "Apple"
+      •int lastIndexOf(Object o): Returns the index of the last occurrence of the element, or -1 if not found.
+            int lastIndex = list.lastIndexOf("Apple");
   ###### Stream Support (Java 8+)
         •Stream<E> stream(): Returns a sequential stream with the list as its source.
              list.stream().forEach(System.out::println); // Streams and prints elements

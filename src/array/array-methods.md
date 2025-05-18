@@ -1,9 +1,9 @@
  🔴🔵☑️✔️ ➡️ ✓→•←⁕⁂※⁜‣
 # Arrays
-   -An array is a container that holds a fixed number of elements of a single type (e.g., int, String,
-     or any object type).
-   -Arrays are objects in Java, so they are allocated on the heap and can be null.
-   -Arrays are immutable in size once created (their length cannot change), but their elements can be modified.
+       -An array is a container that holds a fixed number of elements of a single type (e.g., int, String,
+         or any object type).
+       -Arrays are objects in Java, so they are allocated on the heap and can be null.
+       -Arrays are immutable in size once created (their length cannot change), but their elements can be modified.
 
  ### java.lang.Object
         •length (Field)
@@ -15,9 +15,7 @@
         •wait()
 
  ### java.util.Arrays
-        
-     ➡️
-       •Comparison Methods
+     ➡️Comparison Methods
        •equals()
       
       ➡️Hash Code Methods

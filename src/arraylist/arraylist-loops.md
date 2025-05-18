@@ -1,4 +1,4 @@
-# Ways to Loop Over an ArrayList
+# Different Ways To Loop Over An ArrayList
 
  ### ➡️1)For Loop (Index-Based)
     for (int i = 0; i < list.size(); i++) {
