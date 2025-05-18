@@ -41,26 +41,28 @@
 ✅ **Client Request**  
 ↓  
 ➡️ **Route** (`userRoutes.js`)  
- → Matches the endpoint and attaches middleware + controller  
+→ Matches the endpoint and attaches middleware + controller  
 ↓  
 ➡️ **Middleware** (`authMiddleware.js`, etc.)  
- → CORS / Authenticates / logs / modifies request  
+→ CORS / Authenticates / logs / modifies request  
 ↓  
 ➡️ **Controller** (`userController.js`)  
- → Handles the request:
-  - Calls the appropriate **Service** function
-  - Gets data back
-  - **This controller sends the response**  
+→ Handles the request:  
+- Calls the appropriate **Service** function  
+- Gets data back  
+- **This controller sends the response**  
 ↓  
 ➡️ **Service** (`userService.js`)  
- → Contains business logic
-   - Calls the appropriate **Model** for DB operations  
+→ Contains business logic  
+- Calls the appropriate **Model** for DB operations  
 ↓  
 ➡️ **Model** (`userModel.js`)  
- → Interacts with the **database**  
+→ Interacts with the **database**  
 ↓  
-➡️ **Database returns data** to Model → Service → Controller  
+➡️ **Database**  
+→ Returns data to Model → Service → Controller  
 ↓  
 ✅ **Controller sends the response back to the client**
+
 
 
