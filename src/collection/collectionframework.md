@@ -74,40 +74,40 @@
 
 # Java Collections Decision Hierarchy
 
-1. Need Key-Value Pair? (**Map** Interface)
-   ├── Yes → Use **Map** implementations:
-   │   ├── Need sorted order by keys?
-   │   │   ├── Yes → **`TreeMap`** (Natural/comparator order)
-   │   │   └── No:
-   │   │       ├── Need insertion-order iteration?
-   │   │       │   ├── Yes → **`LinkedHashMap`**
-   │   │       │   └── No → **`HashMap`**
-   │   └── Need thread safety? → **`ConcurrentHashMap`**
-   │
-   └── No → Proceed to Collection types:
+# Java Collections Decision Hierarchy
 
-2. Allow Duplicates?
-   ├── Yes → Use **List** implementations:
-   │   ├── Need fast random access by index?
-   │   │   ├── Yes → **`ArrayList`**
-   │   │   └── No:
-   │   │       ├── Frequent insertions/deletions?
-   │   │       │   ├── Yes → **`LinkedList`**
-   │   │       │   └── No → **`ArrayList`** (default)
-   │   └── Need thread safety? → **`CopyOnWriteArrayList`**
-   │
-   └── No → Proceed to **Set/Queue**:
+1. Need Key-Value Pair? (**Map** Interface)  
+   └─┬─ **Yes** → Use **Map** implementations:  
+   ├─┬─ Need sorted order by keys?  
+   │ ├─┬─ **Yes** → **`TreeMap`** (Natural/comparator order)  
+   │ └─┬─ **No**:  
+   │   └─┬─ Need insertion-order iteration?  
+   │     ├─┬─ **Yes** → **`LinkedHashMap`**  
+   │     └─┬─ **No** → **`HashMap`**  
+   └─┬─ Need thread safety? → **`ConcurrentHashMap`**  
+   └─┬─ **No** → Proceed to Collection types:
 
-3. Need Order Preservation?
-   ├── Insertion Order → **`LinkedHashSet`**
-   ├── Sorted Order → **`TreeSet`**
-   └── No Order → **`HashSet`**
+2. Allow Duplicates?  
+   └─┬─ **Yes** → Use **List** implementations:  
+   ├─┬─ Need fast random access by index?  
+   │ ├─┬─ **Yes** → **`ArrayList`**  
+   │ └─┬─ **No**:  
+   │   └─┬─ Frequent insertions/deletions?  
+   │     ├─┬─ **Yes** → **`LinkedList`**  
+   │     └─┬─ **No** → **`ArrayList`** (default)  
+   └─┬─ Need thread safety? → **`CopyOnWriteArrayList`**  
+   └─┬─ **No** → Proceed to **Set/Queue**:
 
-4. Queue-Specific Needs?
-   ├── FIFO (First-In-First-Out) → **`ArrayDeque`**
-   ├── LIFO (Last-In-First-Out/Stack) → **`ArrayDeque`**
-   ├── Priority-Based → **`PriorityQueue`**
-   └── Thread-Safe Queues → **`ConcurrentLinkedQueue`**, **`BlockingQueue`**
+3. Need Order Preservation?  
+   ├─┬─ Insertion Order → **`LinkedHashSet`**  
+   ├─┬─ Sorted Order → **`TreeSet`**  
+   └─┬─ No Order → **`HashSet`**
+
+4. Queue-Specific Needs?  
+   ├─┬─ FIFO → **`ArrayDeque`**  
+   ├─┬─ LIFO → **`ArrayDeque`**  
+   ├─┬─ Priority-Based → **`PriorityQueue`**  
+   └─┬─ Thread-Safe → **`ConcurrentLinkedQueue`**, **`BlockingQueue`**
 
 
 
