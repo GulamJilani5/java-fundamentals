@@ -70,9 +70,9 @@
 | **Common Implementations** | `ArrayList`, `LinkedList`, `Vector` | `HashSet`, `LinkedHashSet`, `TreeSet`                     | `LinkedList`, `PriorityQueue`, `ArrayDeque`        | `HashMap`, `LinkedHashMap`, `TreeMap`, `Hashtable`               | `Stack` (extends `Vector`)        |
 
 
-# Java Collections Decision Hierarchy
+# ➡️Java Collections Decision Hierarchy
 
-## 1. Need Key-Value Pair? (**Map** Interface)
+### ✅1. Need Key-Value Pair? (**Map** Interface)
 ├── **Yes** → Use **Map** implementations:
 │   ├── Need **sorted order by keys**?
 │   │   ├── Yes → **`TreeMap`** (Natural/comparator order)
@@ -84,7 +84,7 @@
 │
 └── **No** → Proceed to **Collection** types:
 
-## 2. Allow Duplicates?
+### ✅2. Allow Duplicates?
 ├── **Yes** → Use **List** implementations:
 │   ├── Need **fast random access by index**?
 │   │   ├── Yes → **`ArrayList`**
@@ -96,12 +96,12 @@
 │
 └── **No** → Proceed to **Set/Queue**:
 
-## 3. Need Order Preservation?
+### ✅3. Need Order Preservation?
 ├── **Insertion Order** → **`LinkedHashSet`**
 ├── **Sorted Order** → **`TreeSet`**
 └── **No Order** → **`HashSet`**
 
-## 4. Queue-Specific Needs?
+### ✅4. Queue-Specific Needs?
 ├── **FIFO** (First-In-First-Out) → **`ArrayDeque`**
 ├── **LIFO** (Last-In-First-Out/Stack) → **`ArrayDeque`**
 ├── **Priority-Based** → **`PriorityQueue`**
