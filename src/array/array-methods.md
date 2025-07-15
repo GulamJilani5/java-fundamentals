@@ -84,37 +84,38 @@ public static int sum(int[] arr) {
 - wait()
 
 ##### java.util.Arrays
-- Comparison Methods  
+- **Comparison Methods**  
    `equals()`
-- Hash Code Methods  
+- **Hash Code Methods**  
     `hashCode()`
-- String Representation Methods
+- **String Representation Methods**
      `toString()`
-- Deep Comparison, Hash Code, and String Representation (for Multi-Dimensional Arrays)  
+- **Deep Comparison, Hash Code, and String Representation (for Multi-Dimensional Arrays)**  
      `deepEquals(Object[] a1, Object[] a2)` – Checks if two arrays (including nested arrays) are deeply equal.
      `deepHashCode(Object[] a)` – Computes a hash code for an array, including nested arrays.
      `deepToString(Object[] a)` – Returns a string representation of an array, including nested arrays (e.g., "[[1, 2], [3, 4]]").
-- Sorting Methods 
+- **Sorting Methods**   
      `sort()`
-- Parallel Sorting Methods  
+- **Parallel Sorting Methods**  
      `parallelSort(types[] a)` – Sorts a types array in parallel (Java 8+).
-- Binary Search Methods  
+- **Binary Search Methods**  
      `binarySearch(type[] a, byte key)`` – Searches for a key in a sorted type array.
-- Filling Methods  
+- **Filling Methods**  
      `fill()`
-- Copying Methods    
-     `copyOf(Type[], int newLength)` – Copies a type array to a new array of specified length.
-- Stream Conversion Methods    
+- **Copying Methods**    
+     `copyOf(arr, int newLength)` – Copies a type array to a new array of specified length.
+     `Arrays.copyOfRange(arr, from, to)` - closest equivalent to slice() in js.
+- **Stream Conversion Methods**    
      `stream(Type[] array)` – Converts a Type array to a DoubleStream (Java 8+).
-- Mismatching Methods    
+- **Mismatching Methods**    
      `mismatch(Type[] a, Type[] b)` – Finds the index of the first mismatch between two Types arrays (Java 9+).
-- Spliterator Methods  
+- **Spliterator Methods**  
      `spliterator(Type[] array)` – Creates a Spliterator.OfType for a Type array (Java 8+).
-- Set All Methods  
+- **Set All Methods**  
      `setAll(Type[] array, TypeToTypeFunction generator)` – Sets all elements of a Type array using a generator function (Java 8+).
-- Parallel Set All Methods  
+- **Parallel Set All Methods**  
      `parallelSetAll(Type[] array, TypeToTypeFunction generator)` – Sets all elements of a Type array in parallel (Java 8+).
-- Parallel Prefix Methods  
+- **Parallel Prefix Methods**  
      `parallelPrefix(Type[] array, TypeBinaryOperator op)` – Computes a parallel prefix (cumulative operation) on a Type array (Java 8+).
-- As List Method  
+- **As List Method**  
      `asList(T... a)` – Returns a fixed-size List backed by the specified array.
