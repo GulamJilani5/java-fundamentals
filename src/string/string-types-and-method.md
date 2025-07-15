@@ -21,21 +21,21 @@
 - Returns the Unicode code point before the specified index.
 ##### codePointCount(int beginIndex, int endIndex)* 
 - Returns the number of Unicode code points in the range.
-##### compareTo(String anotherString) 
+##### compareTo(String anotherString)☑️
 - Compares two strings lexicographically.
 ##### compareToIgnoreCase(String str) 
 - Compares two strings lexicographically, ignoring case.
-##### concat(String str) 
+##### concat(String str)☑️ 
 - Concatenates the specified string to the end.
-##### contains(CharSequence s) 
+##### contains(CharSequence s)☑️
 - Checks if the string contains the specified sequence.
-##### contentEquals(CharSequence cs) 
+##### contentEquals(CharSequence cs)☑️ 
 - Compares the string to a CharSequence for equality.
 ##### contentEquals(StringBuffer sb) 
 - Compares the string to a StringBuffer for equality.
-##### endsWith(String suffix) 
+##### endsWith(String suffix)☑️ 
 - Checks if the string ends with the specified suffix.
-##### equals(Object anObject) 
+##### equals(Object anObject)☑️ 
 - Compares the string with another object for equality.
 ##### equalsIgnoreCase(String anotherString) 
 - Compares strings, ignoring case.
@@ -49,7 +49,7 @@
 - Encodes the string into a byte array using the named charset.
 ##### getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)* 
 - Copies characters to a char array.
-##### indexOf(int ch)* 
+##### indexOf(int ch)*☑️
 - Returns the index of the first occurrence of the specified character.
 ##### indexOf(int ch, int fromIndex)* 
 - Returns the index of the first occurrence of the character, starting from fromIndex.
@@ -59,11 +59,11 @@
 - Returns the index of the first occurrence of the substring, starting from fromIndex.
 ##### intern() 
 - Returns a canonical representation from the String Pool.
-##### isBlank() 
+##### isBlank()☑️ 
 - Checks if the string is empty or contains only whitespace (Java 11+).
-##### isEmpty() 
+##### isEmpty()☑️ 
 - Checks if the string is empty.
-##### lastIndexOf(int ch)* 
+##### lastIndexOf(int ch)*☑️ 
 - Returns the index of the last occurrence of the specified character.
 ##### lastIndexOf(int ch, int fromIndex)* 
 - Returns the index of the last occurrence of the character, starting backward from fromIndex.
@@ -71,7 +71,7 @@
 - Returns the index of the last occurrence of the specified substring.
 ##### lastIndexOf(String str, int fromIndex)* 
 - Returns the index of the last occurrence of the substring, starting backward from fromIndex.
-##### length()* 
+##### length()*☑️
 - Returns the length of the string.
 ##### lines() 
 - Returns a stream of lines split by line terminators (Java 11+).
@@ -83,9 +83,9 @@
 - Tests if two string regions are equal, with optional case insensitivity.
 ##### regionMatches(int toffset, String other, int ooffset, int len) 
 - Tests if two string regions are equal.
-##### repeat(int count) 
+##### repeat(int count)☑️ 
 - Repeats the string the specified number of times (Java 11+).
-##### replace(char oldChar, char newChar) 
+##### replace(char oldChar, char newChar)☑️ 
 - Replaces all occurrences of oldChar with newChar.
 ##### replace(CharSequence target, CharSequence replacement) 
 - Replaces all occurrences of target with replacement.
@@ -97,7 +97,7 @@
 - Splits the string into an array based on the regex.
 ##### •split(String regex, int limit) 
 - Splits the string with a limit on the number of splits.
-##### •startsWith(String prefix) 
+##### •startsWith(String prefix)☑️ 
 - Checks if the string starts with the specified prefix.
 ##### •startsWith(String prefix, int toffset) 
 - Checks if the string starts with the prefix at the specified offset.
@@ -109,11 +109,11 @@
 - Removes leading whitespace (Java 11+).
 ##### •stripTrailing() 
 - Removes trailing whitespace (Java 11+).
-##### substring(int beginIndex)*  
+##### substring(int beginIndex)* ☑️ 
 - Returns a substring from beginIndex to the end. substring() is very closest to **slice()** in js.
 ##### •substring(int beginIndex, int endIndex)* 
 - Returns a substring from beginIndex to endIndex - 1.
-##### •toCharArray() 
+##### •toCharArray()☑️ 
 - Converts the string to a character array.
 ##### •toLowerCase() 
 - Converts the string to lowercase.

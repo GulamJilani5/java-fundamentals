@@ -102,9 +102,10 @@ public static int sum(int[] arr) {
      `binarySearch(type[] a, byte key)`` – Searches for a key in a sorted type array.
 - **Filling Methods**  
      `fill()`
-- **Copying Methods**    
+- **Copying Methods** ☑️   
      `copyOf(arr, int newLength)` – Copies a type array to a new array of specified length.
      `Arrays.copyOfRange(arr, from, to)` - closest equivalent to slice() in js.
+      `list.subList(start, end)` - Works for List<T> (ArrayList)
 - **Stream Conversion Methods**    
      `stream(Type[] array)` – Converts a Type array to a DoubleStream (Java 8+).
 - **Mismatching Methods**    
@@ -117,5 +118,5 @@ public static int sum(int[] arr) {
      `parallelSetAll(Type[] array, TypeToTypeFunction generator)` – Sets all elements of a Type array in parallel (Java 8+).
 - **Parallel Prefix Methods**  
      `parallelPrefix(Type[] array, TypeBinaryOperator op)` – Computes a parallel prefix (cumulative operation) on a Type array (Java 8+).
-- **As List Method**  
+- **As List Method** 
      `asList(T... a)` – Returns a fixed-size List backed by the specified array.
