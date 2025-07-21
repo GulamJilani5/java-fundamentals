@@ -9,7 +9,7 @@
 ### ➡️2) Specifying Initial Capacity - With a defined initial capacity
     ArrayList<Integer> list = new ArrayList<>(20);
 
-### ➡️3) From Another Collection - Using a Collection (e.g., another List or Set)
+### ➡️3) 🔴From Another Collection - Using a Collection (e.g., another List or Set)
     import java.util.Arrays;
     ArrayList<String> list = new ArrayList<>(Arrays.asList("A", "B", "C"));
 

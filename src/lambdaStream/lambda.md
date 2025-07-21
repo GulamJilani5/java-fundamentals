@@ -1,44 +1,42 @@
 #  Interface
-     An interface in Java is a reference type that defines a contract: a set of methods that must be implemented 
-     by any class that claims to "implement" it.
+An interface in Java is a reference type that defines a contract: a set of methods that must be implemented 
+by any class that claims to "implement" it.
 ### ➡️Key Features:
-  ##### until Java 7: 
-          •Only abstract methods
-  ##### From Java 8+:
-          •default methods (with body)
-          •static methods
-  ##### From Java 9+:
-          •private methods allowed
-          •Cannot have constructors or instance variables (except public static final constants)
+- **until Java 7:** `Only abstract methods`
+- **From Java 8+:** `default methods (with body)`, `static methods`
+- **From Java 9+:** `private methods` allowed
+- Cannot have constructors or instance variables (except public static final constants)
 
 # Abstract Class
-      An abstract class is a class that cannot be instantiated. It can have abstract methods (without body) 
-      and concrete methods (with body).
-  ### ➡️Key Features:
-        •Can have constructors.
-        •Can have instance variables.
-        •Can have both abstract and non-abstract methods.
-        •Supports inheritance.
-        •Allows code reuse via concrete methods.
+An abstract class is a class that cannot be instantiated. It can have abstract methods (without body) 
+and concrete methods (with body).
+### ➡️Key Features:
+- Can have constructors.
+- Can have instance variables.
+- Can have both abstract and non-abstract methods.
+- Supports inheritance.
+- Allows code reuse via concrete methods.
 
 # Anonymous Class
-      An anonymous class is a local class without a name. It's used to create a one-time implementation of an 
-      interface or abstract class.
-  ### ➡️Key Features:
-            •Defined and instantiated in one line.
-            •Often used with event handling, threading, and functional interfaces.
-            •Can override methods immediately.
+An anonymous class is a local class without a name. It's used to create a one-time implementation of an 
+interface or abstract class.
+### ➡️Key Features:
+- Defined and instantiated in one line.
+- Often used with event handling, threading, and functional interfaces.
+- Can override methods immediately.
 
 # Functional Interfaces
-    •One abstract method (👍required).
-    •Any number of default or static methods ➡️(optional).
-    •It allows you to use Lambda Expressions and method references.
+- One abstract method (👍required).
+- Any number of default or static methods ➡️(optional).
+- It allows you to use Lambda Expressions and method references.
 
-      @FunctionalInterface
-      public interface MyFunction {
-          void execute();  // only one abstract method
-      }
-      ⏺️@FunctionalInterface is optional, but it gives a compile-time check to enforce only one abstract method.
+```java
+@FunctionalInterface
+public interface MyFunction {
+    void execute();  // only one abstract method
+}
+```
+- @FunctionalInterface is optional, but it gives a compile-time check to enforce only one abstract method.
 
 # Built-in(Standard) Functional Interfaces (from 🔵java.util.function package)
 
@@ -57,15 +55,15 @@
 
 # Lambda Function and Lambda Expressions
 
-###      ➡️Lambda Expression (Definition/Syntax)
-            •Refers to the syntax/code construct used to declare an anonymous function.
-            •It’s the actual code written using the -> syntax.
-            •It doesn’t exist on its own – it must be assigned to a variable or passed to a method expecting a 
+### ➡️Lambda Expression (Definition/Syntax)
+- Refers to the syntax/code construct used to declare an anonymous function.
+- It’s the actual code written using the -> syntax.
+- It doesn’t exist on its own – it must be assigned to a variable or passed to a method expecting a 
              functional interface.
-###      ➡️Lambda Function (Executable Entity)
-            •Refers to the actual instance of a function created from a lambda expression.
-            •It's a function object that implements a functional interface.
-            •When you assign a lambda expression to a functional interface, you get a lambda function.
+### ➡️Lambda Function (Executable Entity)
+- Refers to the actual instance of a function created from a lambda expression.
+- It's a function object that implements a functional interface.
+- When you assign a lambda expression to a functional interface, you get a lambda function.
 
 | Concept          | Lambda Expression         | Lambda Function                                                |
 | ---------------- | ------------------------- | -------------------------------------------------------------- |
@@ -78,52 +76,67 @@
   
 ### ➡️Different ways to create the  lambda expression  
      
-  ##### 1. No Parameter Lambda
-             •Used when the method has no arguments.
-             •Often used with Runnable, event listeners, etc.
-             🔵Example: 
-                Runnable r = () -> System.out.println("Hello World");
-                r.run();
-  ##### 2. Single Parameter Lambda
-             •If only one parameter, parentheses are optional
-              🔵Example:
-               Consumer<String> printer = message -> System.out.println(message);
-               printer.accept("Lambda with one parameter");
-  ##### 3. Multiple Parameters Lambda
-            •Parentheses required when there is more than one parameter.
-             🔵Example:
-                BiFunction<Integer, Integer, Integer> add = (a, b) -> a + b;
-                System.out.println(add.apply(5, 10)); // Output: 15
+##### 1. No Parameter Lambda
+- Used when the method has no arguments.
+- Often used with Runnable, event listeners, etc.
+**Example:** 
+```java
+Runnable r = () -> System.out.println("Hello World");
+r.run();
+```
+                
+##### 2. Single Parameter Lambda
+- If only one parameter, parentheses are optional
+**Example:**
+```java
+ Consumer<String> printer = message -> System.out.println(message);
+ printer.accept("Lambda with one parameter");
+ ```
+##### 3. Multiple Parameters Lambda
+- Parentheses required when there is more than one parameter.
+**Example:**
+```java
+BiFunction<Integer, Integer, Integer> add = (a, b) -> a + b;
+System.out.println(add.apply(5, 10)); // Output: 15
+```
 
-   ##### 4. With Block Body (Curly Braces and Return)
-                •Use this when the logic has multiple lines or return statements.
-                 🔵Example:
-                  Function<Integer, String> evenOdd = (n) -> {
-                     if (n % 2 == 0) return "Even";
-                     else return "Odd";
-                  };
-                  System.out.println(evenOdd.apply(4)); // Even
+##### 4. With Block Body (Curly Braces and Return)
+- Use this when the logic has multiple lines or return statements.
+  **Example:**
+```java
+Function<Integer, String> evenOdd = (n) -> {
+   if (n % 2 == 0) return "Even";
+   else return "Odd";
+};
+System.out.println(evenOdd.apply(4)); // Even
 
-   ##### 5. Without Return (Single-Line Expression)
-                •For simple expressions, Java infers return value automatically.
-                 🔵Example:                    
-                    Predicate<Integer> isPositive = x -> x > 0;
-                    System.out.println(isPositive.test(5)); // true
+```
+##### 5. Without Return (Single-Line Expression)
+- For simple expressions, Java infers return value automatically.
+        **Example:** 
+        
+```java                   
+Predicate<Integer> isPositive = x -> x > 0;
+System.out.println(isPositive.test(5)); // true
+ ```
 
-   ##### 6. With Type Declaration (Optional)
-               •Type is usually inferred, but can be explicitly declared.
-                🔵Example:
-                   BinaryOperator<Integer> multiply = (Integer a, Integer b) -> a * b;
-                   System.out.println(multiply.apply(3, 4)); // 12
-
-   ##### 7. Returning a Lambda (Higher-order style)
-              •You can return lambdas from methods (higher-order functions).
-               🔵Example:
-                  public static Function<Integer, Integer> multiplier(int x) {
-                      return (n) -> n * x;
-                   }
-                  Function<Integer, Integer> times3 = multiplier(3);
-                  System.out.println(times3.apply(10)); // 30
+##### 6. With Type Declaration (Optional)
+- Type is usually inferred, but can be explicitly declared.
+**Example:** 
+```java
+BinaryOperator<Integer> multiply = (Integer a, Integer b) -> a * b;
+System.out.println(multiply.apply(3, 4)); // 12
+```
+##### 7. Returning a Lambda (Higher-order style)
+- You can return lambdas from methods (higher-order functions).
+**Example:** 
+```java
+public static Function<Integer, Integer> multiplier(int x) {
+    return (n) -> n * x;
+ }
+Function<Integer, Integer> times3 = multiplier(3);
+System.out.println(times3.apply(10)); // 30
+```
 
 
 

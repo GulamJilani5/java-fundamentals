@@ -1,4 +1,5 @@
 # Stream Creation / Converting to Stream (Source)
+
    ### ➡️From Collections
               •collection.stream()
               •collection.parallelStream() 
@@ -13,8 +14,6 @@
               •Stream.iterate(seed, unaryOperator)
               •IntStream.range(1, 10)
               •LongStream.rangeClosed(1, 10)
-
-
 
  # Intermediate Operations
   
