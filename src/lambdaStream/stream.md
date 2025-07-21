@@ -1,19 +1,16 @@
 # Stream Creation / Converting to Stream (Source)
-
-   ### ➡️From Collections
-              •collection.stream()
-              •collection.parallelStream() 
-
-   ### ➡️From Arrays
-              •Arrays.stream(array)
-              •Stream.of(array)
-
-   ### ➡️From Values
-              •Stream.of(1, 2, 3)
-              •Stream.generate(Supplier)
-              •Stream.iterate(seed, unaryOperator)
-              •IntStream.range(1, 10)
-              •LongStream.rangeClosed(1, 10)
+### ➡️From Collections
+- collection.stream()
+- collection.parallelStream() 
+### ➡️From Arrays
+- Arrays.stream(array)
+- Stream.of(array)
+### ➡️From Values
+- Stream.of(1, 2, 3)
+- Stream.generate(Supplier)
+- Stream.iterate(seed, unaryOperator)
+- IntStream.range(1, 10)
+- LongStream.rangeClosed(1, 10)
 
  # Intermediate Operations
   
