@@ -11,14 +11,16 @@ Java 21, an LTS release, introduced significant concurrency and expressiveness i
 
 ### ➡️ Pattern Matching for switch (Finalized):
 
-### ➡️ Sequenced Collections:🟠
+### ➡️ Unnamed Patterns & Variables(Preview)
+
+### ➡️ Sequenced Collections(Finalized)::🟠
 
 #### 🟦 1. SequencedCollection<E> Interface
 
 - Introduced in Java 21 (Preview)
 - Superinterface for ordered collections (like List, Deque, LinkedHashSet, etc.)
 
-###### Methods
+###### 🔵Methods
 
 - `E getFirst()`;
 - `E getLast()`;
@@ -46,12 +48,6 @@ Java 21, an LTS release, introduced significant concurrency and expressiveness i
 
 ### ➡️ Foreign Function & Memory API (Finalized):
 
-###
+### ➡️ Multi-File Source Launch
 
-###
-
-###
-
-###
-
-###
+### ➡️ String Templates(Preview)
