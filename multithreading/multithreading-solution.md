@@ -1,10 +1,12 @@
-# Multithreading Resolution
+️✔️🟦🟣🔵🟢🔴🟡🟠➡️⭕🟠⬛🟩🟪🟫 ➡️ ⏺️ ••‣⁎⁕⁜※⁂
 
-## ➡️ 1. Synchronization
+# ⏺️ Multithreading Resolution
+
+## ➡️ Synchronization
 
 - Synchronization prevents thread interference and ensures data consistency when multiple threads access shared resources.
 
-### Synchronized Methods:
+### 🟦 Synchronized Methods:
 
 ```java
 class Counter {
@@ -15,7 +17,7 @@ class Counter {
 }
 ```
 
-### Synchronized Blocks:
+### 🟦 Synchronized Blocks:
 
 ```java
 class Counter {
@@ -32,12 +34,12 @@ class Counter {
 - More granular, locking only specific code sections.
 - Reduces contention compared to synchronized methods.
 
-### Synchronized Keyword:
+### 🟦 Synchronized Keyword:
 
 - Ensures only one thread accesses the synchronized resource at a time.
 - Uses the object’s intrinsic lock (monitor).
 
-## ➡️ 4. Thread Safety
+## ➡️ Thread Safety
 
 Thread safety ensures that shared data remains consistent across threads without corruption.
 
@@ -99,7 +101,3 @@ class Counter {
 
 - More flexible than synchronized (e.g., supports try-lock, fairness).
 - Requires explicit `lock()` and `unlock()` (use finally to avoid deadlocks).
-
-## ➡️ 2. Volatile
-
-## ➡️ 3. Atomic

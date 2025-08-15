@@ -1,4 +1,6 @@
-# Concurrency vs Multithreading
+️✔️🟦🟣🔵🟢🔴🟡🟠➡️⭕🟠⬛🟩🟪🟫 ➡️ ⏺️ ••‣⁎⁕⁜※⁂
+
+# ⏺️ Concurrency vs Multithreading
 
 Multithreading is one way to achieve concurrency, but concurrency is a broader idea that also includes multiprocessing and async execution.
 
@@ -8,18 +10,18 @@ Multithreading is one way to achieve concurrency, but concurrency is a broader i
 | Parallelism    | Might be parallel or just interleaved   | Can be parallel if CPU has multiple cores   |
 | Implementation | Can use threads, processes, async, etc. | Always uses multiple threads in one process |
 
-## Issues in concurrency/Multithreading
+## ➡️ Issues in concurrency/Multithreading
 
-### Synchronization Problems (Thread Safety Issues)
+### 🟦 Synchronization Problems (Thread Safety Issues)
 
-##### Race Condition
+##### 🔵 Race Condition
 
 Happens when two or more threads try to access and modify the same data at the same time, and the final result depends on which thread wins the race.
 
 - **Real-world analogy:** Two chefs are adding salt to the same soup without talking to each other — sometimes it’s perfect, sometimes way too salty.
 - **Fix/Solution:** Synchronization (synchronized, locks, AtomicInteger).
 
-##### Visibility Problem
+##### 🔵 Visibility Problem
 
 Thread A changes a variable, but Thread B doesn’t see the change immediately because the value is cached in CPU core’s local memory/Cached Memory (not flushed to main memory yet).
 
@@ -28,9 +30,9 @@ Thread A changes a variable, but Thread B doesn’t see the change immediately b
 - **Real-world analogy:** Chef A updates the recipe on his clipboard but doesn’t tell Chef B — B keeps cooking using the old recipe.
 - **Fix/Solution:** Use volatile or synchronization to ensure memory visibility.
 
-### Thread Coordination Problems (Locking & Resource Management Issues)
+### 🟦 Thread Coordination Problems (Locking & Resource Management Issues)
 
-##### Deadlock
+##### 🔵 Deadlock
 
 Two or more threads are waiting on each other forever, so nothing moves forward.
 
@@ -42,7 +44,7 @@ Two or more threads are waiting on each other forever, so nothing moves forward.
   - Use tryLock() with timeout.
   - Minimize lock usage.
 
-##### Starvation
+##### 🔵 Starvation
 
 Happens when two or more threads try to access and modify the same data at the same time, and the final result depends on which thread wins the race.
 

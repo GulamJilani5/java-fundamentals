@@ -1,4 +1,6 @@
-# Primitive Types
+☑️✔️🟦🟣🔵🟢🔴🟡🟠➡️⭕🟠⬛🟩🟪🟫 ➡️ ⏺️ ••‣⁎⁕⁜※⁂
+
+# ⏺️ Primitive Types
 
 - **Java** has exactly **8** primitives
 - **Primitives** are not objects → No methods, no null (except if boxed).
@@ -18,7 +20,7 @@
 | **char**    | 16                                                         | Single Unicode character (`'\u0000'` to `'\uffff'`) |
 | **boolean** | JVM-dependent (usually 1 bit, stored as 1 byte internally) | `true` or `false`                                   |
 
-# Wrapper Classes (Object versions of primitives)
+# ⏺️ Wrapper Classes (Object versions of primitives)
 
 - These are objects in `java.lang` that wrap primitive values. They allow primitives to be treated like objects (e.g., in Collections).
 - Can be used in Collections (like `List<Integer>`) because **Collections** work only with objects, not primitives.
