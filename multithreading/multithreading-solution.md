@@ -4,7 +4,16 @@
 
 ## ➡️ Synchronization
 
-- Synchronization prevents thread interference and ensures data consistency when multiple threads access shared resources.
+- Lock-based (uses intrinsic locks / monitors).
+- Provides both mutual exclusion (atomicity) and visibility guarantees
+- Method level (instance or static).
+- Block level (synchronized block within a method).
+- Cannot be applied at class level directly (but can synchronize static methods for class-level locks).
+
+### Use Case
+
+- When you need to protect a critical section involving multiple operations.
+- **Example:** transferring money between two accounts.
 
 ### 🟦 Synchronized Methods:
 
@@ -30,7 +39,6 @@ class Counter {
 ```
 
 - Locks the entire object (instance methods) or class (static methods).
-
 - More granular, locking only specific code sections.
 - Reduces contention compared to synchronized methods.
 
@@ -52,6 +60,8 @@ Thread safety ensures that shared data remains consistent across threads without
 ### 🟦 Volatile Keyword:
 
 - Ensures visibility of variable changes across threads without guaranteeing atomicity.
+- Lock free
+- Used with variables(eg. flags)
 
 ```java
 class Shared {
@@ -66,6 +76,9 @@ class Shared {
 ### 🟦 Atomic Classes:
 
 - Provides lock-free, thread-safe operations on single variables using low-level CPU instructions (e.g., Compare-and-Swap).
+- Lock free
+- Variable level (eg. Counters)
+- Used with Wrappers not primitives(eg. with Integer not int)
 
 ```java
 import java.util.concurrent.atomic.AtomicInteger;
@@ -77,7 +90,7 @@ class Counter {
 }
 ```
 
-- Classes like `AtomicInteger`, `AtomicReference` provide lock-free, thread-safe operations.
+- Classes like `AtomicInteger`, `AtomicLong` `AtomicReference` provide lock-free, thread-safe operations.
 
 ### 🟦 ReentrantLock:
 
