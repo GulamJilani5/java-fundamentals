@@ -10,12 +10,12 @@
 - Block level (synchronized block within a method).
 - Cannot be applied at class level directly (but can synchronize static methods for class-level locks).
 
-### Use Case
+##### Use Case
 
 - When you need to protect a critical section involving multiple operations.
 - **Example:** transferring money between two accounts.
 
-### 🟦 Synchronized Methods:
+#### 🟦 Synchronized Methods:
 
 ```java
 class Counter {
@@ -26,7 +26,7 @@ class Counter {
 }
 ```
 
-### 🟦 Synchronized Blocks:
+#### 🟦 Synchronized Blocks:
 
 ```java
 class Counter {
@@ -42,7 +42,7 @@ class Counter {
 - More granular, locking only specific code sections.
 - Reduces contention compared to synchronized methods.
 
-### 🟦 Synchronized Keyword:
+#### 🟦 Synchronized Keyword:
 
 - Ensures only one thread accesses the synchronized resource at a time.
 - Uses the object’s intrinsic lock (monitor).
@@ -51,13 +51,13 @@ class Counter {
 
 Thread safety ensures that shared data remains consistent across threads without corruption.
 
-### 🟦 Thread-Safe Classes:
+#### 🟦 Thread-Safe Classes:
 
 - **Collections:** Use Collections.synchronizedList() or CopyOnWriteArrayList for thread-safe collections.
 - **StringBuilder vs. StringBuffer:** StringBuffer is thread-safe; StringBuilder is not.
 - **Concurrent Utilities:** Use ConcurrentHashMap, BlockingQueue, etc., for high-performance thread safety.
 
-### 🟦 Volatile Keyword:
+#### 🟦 Volatile Keyword:
 
 - Ensures visibility of variable changes across threads without guaranteeing atomicity.
 - Lock free
@@ -73,7 +73,7 @@ class Shared {
 
 - Does not guarantee atomicity (e.g., i++ still needs synchronization).
 
-### 🟦 Atomic Classes:
+#### 🟦 Atomic Classes:
 
 - Provides lock-free, thread-safe operations on single variables using low-level CPU instructions (e.g., Compare-and-Swap).
 - Lock free
@@ -92,7 +92,7 @@ class Counter {
 
 - Classes like `AtomicInteger`, `AtomicLong` `AtomicReference` provide lock-free, thread-safe operations.
 
-### 🟦 ReentrantLock:
+#### 🟦 ReentrantLock:
 
 - A flexible, explicit locking mechanism that provides more control than synchronized.
 
