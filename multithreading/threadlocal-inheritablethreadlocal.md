@@ -1,9 +1,8 @@
 ✔️🟦🟣🔵🟢🔴🟡🟠➡️⭕🟠⬛🟩🟪🟫 ➡️ ⏺️ ••‣⁎⁕⁜※⁂
 
-# ⏺️ ThreadLocal
+# ⏺️ ThreadLocal (`java.lang.ThreadLocal<T>`)
 
-- `java.lang.ThreadLocal<T>`
-  **ThreadLocal** is a class that provides thread-local storage. This means each thread in a multi-threaded application can have its own independent copy of a variable, and changes to that variable in one thread do not affect its value in other threads. Essentially, ThreadLocal allows you to associate a variable with a specific thread, ensuring thread isolation for that variable.
+**ThreadLocal** is a class that provides thread-local storage. This means each thread in a multi-threaded application can have its own independent copy of a variable, and changes to that variable in one thread do not affect its value in other threads. Essentially, ThreadLocal allows you to associate a variable with a specific thread, ensuring thread isolation for that variable.
 
 ### ➡️ What Problem Does ThreadLocal Solve?
 
