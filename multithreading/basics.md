@@ -1,18 +1,16 @@
-🔵🟢🔴➡️⭕🟠🟦🟣🟥🟧✔️⏺️
-☑️ • ‣ → ⁕
+🔵🟢🔴➡️⭕🟠🟦🟣🟥🟧✔️⏺️ ☑️ • ‣ → ⁕
 
-# ➡️ 1. Threads and Creating Thread
+# ➡️ 1. Threads, Runnable, Callable, Thread Pool, Future
 
 ## 🟦 Threads
 
 - Threads are lightweight processes within a program that allow multiple tasks to run concurrently, utilizing CPU resources efficiently.
 - Threads share the same memory space, enabling communication but requiring careful synchronization.
+- - Primary two ways to create the thread
 
-## 🟦 Creating Thread
+#### 🔵 Creating Thread
 
-- Primary two ways to create the thread
-
-### 🔵 Extending the Thread Class
+- Extending the Thread Class
 
 ```java
 class MyThread extends Thread {
@@ -32,7 +30,11 @@ public class Main {
 - Override the `run()` method to define the thread's task.
 - Call `start()` to initiate the thread (not `run()` which executes in the current thread).
 
-### 🔵 Implementing the Runnable Interface (Preferred):
+## 🟦 Runnable
+
+- A task that does something but doesn’t return a result. It has a run() method
+
+#### 🔵 Implementing the Runnable Interface (Preferred):
 
 ```java
 class MyRunnable implements Runnable {
@@ -50,6 +52,18 @@ public class Main {
 
 - More flexible, as it allows the class to extend another class.
 - Pass the Runnable object to a Thread constructor.
+
+## 🟦 Callable
+
+- A task that does something and returns a result. It has a `call()` method.
+
+## 🟦 Future
+
+- An object that holds the result of a `Callable task`, which you can check later.
+
+## 🟦 Thread Pool
+
+- A group of reusable threads managed by the `ExecutorService` to run tasks.
 
 # ➡️ 2. Thread Lifecycle
 
