@@ -2,7 +2,7 @@
 
 # ⏺️ Virtual Thread
 
-A Virtual Thread is a lightweight thread introduced in **Java 19** (as preview) and stabilized in **Java 21** under `Project Loom`. It is a new type of thread that runs on the JVM but is much cheaper to create and manage compared to traditional platform (OS) threads.
+A Virtual Thread is a lightweight thread introduced in **Java 19** (as preview) and stabilized in **Java 21** under `Project Loom`. It is a new type of thread that **runs on the JVM** but is much cheaper to create and manage compared to **Traditional Platform (OS) Threads**.
 
 - A **Platform Thread** is a Java thread backed 1:1 by an OS thread.
 - A **Virtual Thread** is a Java thread managed mostly by the JVM, not directly tied to an OS thread.
