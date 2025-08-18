@@ -46,7 +46,8 @@ Two or more threads are waiting on each other forever, so nothing moves forward.
 
 ##### 🔵 Starvation
 
-Happens when two or more threads try to access and modify the same data at the same time, and the final result depends on which thread wins the race.
+Happens when multiple threads access shared mutable data at the same time without proper synchronization.
+Final outcome depends on the unpredictable thread scheduling.
 
 - **Real-world analogy:** Two chefs are adding salt to the same soup without talking to each other — sometimes it’s perfect, sometimes way too salty.
 - **Fix/Solution:** Synchronization (synchronized, locks, AtomicInteger).
