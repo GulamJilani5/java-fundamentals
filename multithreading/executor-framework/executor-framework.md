@@ -2,10 +2,10 @@
 
 # ⏺️ Executor Framework
 
-### is Executor Framework preferred?
+### ➡️ Is Executor Framework Preferred?
 
 - **Executor Framework** is Pure Java(**Core Java / JDK level**) concurrency utility (since **Java 5**, `java.util.concurrent`).
-- Yes — but usually through Spring abstractions (`TaskExecutor`, `@Async`, `TaskScheduler`) instead of raw
+- Yes Preferred — but usually through Spring abstractions (`TaskExecutor`, `@Async`, `TaskScheduler`) instead of raw
   `Executors.newFixedThreadPool()` etc. Spring manages the lifecycle of the thread pool for you.
 - `Executors` (via Spring’s `TaskExecutor`) are still used internally for things like background jobs, scheduling,
   or CPU-heavy tasks in Spring boot.
