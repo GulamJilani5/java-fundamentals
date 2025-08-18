@@ -11,14 +11,14 @@ A ThreadPoolExecutor manages a pool of threads to execute tasks (Runnable or Cal
 
 ### Why Use ThreadPoolExecutor
 
-- **Customization:** Unlike Executors.newFixedThreadPool, which has a fixed size and unbounded queue, ThreadPoolExecutor lets you set queue limits and rejection policies.
+- **Customization:** Unlike `Executors.newFixedThreadPool`, which has a fixed size and unbounded queue, `ThreadPoolExecutor` lets you set queue limits and rejection policies.
 - **Performance Tuning:** You can optimize thread count and queue size for your application’s needs.
 - **Resource Control:** Prevents resource exhaustion by limiting threads and queue size.
 - **Flexibility:** Supports custom thread factories and rejection handlers for advanced use cases.
 
 ### ThreadPoolExecutor Parameters
 
-- **corePoolSize (int):** The number of threads to keep in the pool, even when idle
+- **corePoolSize (int):** The number of threads to keep in the pool, even when idle.
 - **maximumPoolSize (int):** The maximum number of threads allowed in the pool.
 - **keepAliveTime (long):** The time that extra threads (beyond `corePoolSize`) remain idle before being terminated.
 - **unit (TimeUnit):** The time unit for `keepAliveTime` (e.g., seconds, milliseconds).
