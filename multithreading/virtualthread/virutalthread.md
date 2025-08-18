@@ -7,7 +7,7 @@ A Virtual Thread is a lightweight thread introduced in **Java 19** (as preview) 
 - A **Platform Thread** is a Java thread backed 1:1 by an OS thread.
 - A **Virtual Thread** is a Java thread managed mostly by the JVM, not directly tied to an OS thread.
 - Thousands (or even millions) of Virtual Threads can run on a limited number of OS threads.
-- 🔴` Virtual threads are not faster thread, they do not run code any faster than Plateform Threads. But They exist to provide Scale(Higher Throughput) and lower latency(not speed).
+- 🔴**Virtual Threads** are not faster thread, they do not run code any faster than **Plateform Threads**. But They exist to provide `Scale`(**Higher Throughput**) and **Lower Latency**(not speed).
 
 ### ➡️ What Problems Do Virtual Threads Solve?
 
