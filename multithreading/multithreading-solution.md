@@ -5,14 +5,15 @@
 ## ➡️ Synchronization
 
 - Lock-based (uses intrinsic locks / monitors).
-- Provides both mutual exclusion (atomicity) and visibility guarantees
+- 🔴Provides both **mutual exclusion (atomicity)** + **visibility** guarantees
+- 🔴Only thread enters the block at a time.
 - Method level (instance or static).
 - Block level (synchronized block within a method).
 - Cannot be applied at class level directly (but can synchronize static methods for class-level locks).
 
 ##### Use Case
 
-- When you need to protect a critical section involving multiple operations.
+- 🔴When you need to protect a critical section involving multiple operations and shared state.
 - **Example:** transferring money between two accounts.
 
 #### 🟦 Synchronized Methods:
@@ -59,9 +60,9 @@ Thread safety ensures that shared data remains consistent across threads without
 
 #### 🟦 Volatile Keyword:
 
-- Ensures visibility of variable changes across threads without guaranteeing atomicity.
+- Ensures 🔴**visibility** of variable changes across threads without guaranteeing atomicity.
 - Lock free
-- Used with variables(eg. flags)
+- Used with variables(**eg.** 🔴 flags and state variables)
 
 ```java
 class Shared {
@@ -75,10 +76,11 @@ class Shared {
 
 #### 🟦 Atomic Classes:
 
-- Provides lock-free, thread-safe operations on single variables using low-level CPU instructions (e.g., Compare-and-Swap).
-- Lock free
-- Variable level (eg. Counters)
-- Used with Wrappers not primitives(eg. with Integer not int)
+- 🔴Provides lock-free, thread-safe operations on single variables using low-level CPU instructions (e.g., Compare-and-Swap).
+- Provides both visibility & atomicity for single variables.
+- 🔴Variable level (eg. Counters, Accumulators)
+- Used with Wrappers not primitives(**e.g.** with Integer not int)
+- Faster than synchronized in most cases.
 
 ```java
 import java.util.concurrent.atomic.AtomicInteger;
