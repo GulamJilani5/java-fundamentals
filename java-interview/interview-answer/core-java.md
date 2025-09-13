@@ -56,3 +56,12 @@ u -> System.out.println("User name: " + u.getName()),
 () -> System.out.println("User not found")
 );
 `
+
+## ➡️ == vs equals in java
+
+| **Aspect**      | **`==`**                  | **`.equals()`**                        |
+| --------------- | ------------------------- | -------------------------------------- |
+| **Works on**    | Primitives & Objects      | Objects only                           |
+| **For Objects** | Compares memory addresses | Compares contents (if overridden)      |
+| **Default**     | Reference equality        | Reference equality (unless overridden) |
+| **Override?**   | Cannot override           | Can override in a class                |
