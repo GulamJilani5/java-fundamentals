@@ -1,6 +1,6 @@
-# Interview Questions
+🔵🟢🔴➡️⭕🟠🟦🟣🟥🟧✔️ ☑️ • ‣ → ⁕ ⏺️
 
-- all the answer can be found in the
+# Interview Questions
 
 ### Core Java
 
