@@ -96,3 +96,23 @@
 - They usually indicate **programming errors** (like **null access**, **invalid index**, etc.).
 - Unchecked exceptions indicate **bugs in logic** (should be avoided with **validations**).
 - **Example:** `NullPointerException`, `ArrayIndexOutOfBoundsException`, `ArithmeticException`.
+
+## ➡️ 7. Explain Garbage Collection (GC) in Java and different GC algorithms.
+
+### 🟦 Memory Management in Java
+
+- The Java Memory Model is how the JVM organizes memory to run a Java program efficiently.
+- It divides memory into three main areas: the Heap, Stack, and Metaspace
+- This structure ensures Java programs are memory-efficient, thread-safe, and robust, with the JVM handling most of the complexity automatically.
+
+##### 🔵 Heap
+
+This is where all objects, like arrays or class instances, are stored. It’s shared across all threads and divided into the Young Generation for new objects and the Old Generation for long-lived objects. The Garbage Collector manages the Heap to free up memory from unused objects.
+
+##### 🔵 Stack
+
+This is used for method execution. Each thread has its own Stack, which stores stack frames containing local variables and method call information. When a method finishes, its frame is removed, making the Stack very fast and efficient.
+
+##### 🔵 Metaspace
+
+This stores class metadata, like class definitions and method information. It replaced PermGen in Java 8 and grows dynamically to avoid memory issues.
