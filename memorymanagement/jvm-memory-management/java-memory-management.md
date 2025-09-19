@@ -29,7 +29,3 @@ The Java Memory Model is how the Java Virtual Machine (JVM) organizes and manage
 - **Analogy:** Think of Metaspace as a filing cabinet where the JVM keeps instructions on how to build and use your objects.
 - Before **Java 8**, this was called PermGen (Permanent Generation), but Metaspace is more flexible and grows dynamically, reducing the chance of running out of space.
 - It’s not part of the Heap and is managed separately.
-
-## 🟦 Key Points to Emphasize:
-
-## 🟦 Tips for Understanding:
