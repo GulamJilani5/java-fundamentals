@@ -30,6 +30,8 @@
 
 ## ➡️ 9. Explain Thread vs Runnable, and synchronization in Java.
 
+- Also Find Somehting `D:\Jilani\learning\java-fundamentals\multithreading\basics.md`
+
 ## ➡️ 10. How does Java memory model (JVM memory areas: heap, stack, metaspace) work?
 
 - Find Answer `java-fundamentals\java-interview\interview-answer\core-java\core-java-answer_2.md`
@@ -40,3 +42,5 @@
 - Answer also include memory managemnt tips in java
 - Find Answer `java-fundamentals\java-interview\interview-answer\core-java\core-java-answer_1.md`
 - Also Find Something `java-fundamentals\java-interview\interview-answer\core-java\core-java-answer_2.md`
+
+## ➡️ 12. stacoverflow error vs outOfMemoryError
