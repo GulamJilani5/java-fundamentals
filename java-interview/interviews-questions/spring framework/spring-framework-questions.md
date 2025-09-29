@@ -21,3 +21,5 @@
 ## ➡️9. What is Spring Proxy and difference between JDK dynamic proxy & CGLIB proxy?
 
 ## ➡️10. How do you handle exceptions globally in Spring (@ControllerAdvice, @ExceptionHandler)?
+
+## ➡️11. What are the types of dependency injection? And which one do you prefer??
