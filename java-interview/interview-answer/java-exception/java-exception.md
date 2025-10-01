@@ -17,7 +17,7 @@
 
 🔵🟢🔴➡️⭕🟠🟦🟣🟥🟧✔️ ☑️ • ‣ → ⁕ ⏺️
 
-## ➡️ 12. stacoverflow error vs outOfMemoryError
+## ➡️ 2. stacoverflow error vs outOfMemoryError
 
 ### 🟦 StackOverflowError
 
@@ -59,3 +59,60 @@ while(true){
     list.add("Hello"); // keeps adding strings forever
 }
 ```
+
+## ➡️ 3. ClassNotFoundException vs NoClassDefFoundError
+
+- They look similar but are not the same
+
+### 🟦 ClassNotFoundException
+
+- Checked Exception
+- Thrown when your code explicitly loads a class by name (e.g. Class.forName("...") or ClassLoader.loadClass) but the JVM can't find it at runtime.
+
+- **Example:**
+
+```java
+public class Demo {
+
+public static void main(String[] args) throws
+
+Exception {
+
+Class.forName ("com.example.MissingClass");
+
+// Throws ClassNotFoundException if not in
+
+classpath
+
+}
+
+}
+```
+
+- Happens when the class is missing from the classpath at runtime.
+
+### 🟦 NoClassDefFoundError
+
+- Error (unchecked, serious)
+- Thrown when a class was present at compile time but not available at runtime when the JVM tries to use it.
+
+- **Example:**
+
+```java
+public class Main {
+
+public static void main(String[] args) {
+
+MissingClass obj = new MissingClass(); // Compiles fine if MissingClass.class exists at compile time
+
+// But throws NoClass DefFoundError at runtime if .class is deleted
+
+}
+```
+
+- Happens when the JVM can't load a class definition that itit expected to be there.
+
+### 🟦 Interview Catch:
+
+- **ClassNotFoundException** = Developer explicitly tried to load it, but not found.
+- **NoClassDefFoundError** = JVM itself tried to load it, but failed.

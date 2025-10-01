@@ -5,3 +5,7 @@
 ## ➡️ 2. stacoverflow error vs outOfMemoryError
 
 - Find Answer `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\java-exception\java-exception.md`
+
+## ➡️ 3. ClassNotFoundException vs NoClassDefFoundError
+
+- Find Answer `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\java-exception\java-exception.md`
