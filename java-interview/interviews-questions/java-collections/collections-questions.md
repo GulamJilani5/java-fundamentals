@@ -6,8 +6,8 @@
 
 ## ➡️ 4. Explain HashMap internal working (hashing, collision handling, load factor).
 
-- Find Answer `java-fundamentals\java-interview\interview-answer\core-java\core-java-answer_2.md`
+- Find Answer `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\java-collections\collection-answer.md`
 
 ## ➡️ 5. Difference between HashMap and ConcurrentHashMap.
 
-- Find Answer `java-fundamentals\java-interview\interview-answer\core-java\core-java-answer_2.md`
+- Find Answer `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\java-collections\collection-answer.md`
