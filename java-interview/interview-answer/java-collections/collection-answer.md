@@ -105,3 +105,8 @@
 
 - `ConcurrentHashMap` provides atomic operations like `putIfAbsent`, `computeIfAbsent`.
 - In **Java 8+**, both support functional-style operations, but `ConcurrentHashMap` ensures thread-safety in them.
+
+## ➡️ 6. Why is Map Not Iterable in Java?"
+
+- Unlike **List or Set**, a **Map** in Java doesn't implement **Iterable** because it stores key-value pairs, not individual elements.
+- The **Iterable** interface is designed for linear collections with single values, but a **Map** is a lookup table, not a sequence.

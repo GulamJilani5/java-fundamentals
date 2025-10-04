@@ -27,3 +27,8 @@ The hashcode of a String is cached once created. Since Strings never change, loo
 
 - Immutability = Security + Performance + Reusability
 - I'll cover String Constant Pool in the next post, and how it ties directly to immutability
+
+## ➡️ Why is String immutable but StringBuilder mutable?
+
+- **String** immutability ensures security, caching, and thread-safety.
+- **StringBuilder** is mutable for performance-faster when doing lots of modifications.

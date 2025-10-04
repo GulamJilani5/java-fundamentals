@@ -10,6 +10,10 @@
 
 - Find Answer `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\core-java\core-java-answer_4.md`
 
+## ➡️ Why is String immutable but StringBuilder mutable?
+
+- - Find Answer `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\core-java\core-java-answer_4.md`
+
 ## ➡️ 3. isNull vs isPresent
 
 ## ➡️ 4. why are strings immutable in java

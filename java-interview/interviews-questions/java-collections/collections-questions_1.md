@@ -11,3 +11,5 @@
 ## ➡️ 5. Difference between HashMap and ConcurrentHashMap.
 
 - Find Answer `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\java-collections\collection-answer.md`
+
+## ➡️ 6. Why is Map Not Iterable in Java?"
