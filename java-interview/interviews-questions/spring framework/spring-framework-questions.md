@@ -23,3 +23,7 @@
 ## ➡️10. How do you handle exceptions globally in Spring (@ControllerAdvice, @ExceptionHandler)?
 
 ## ➡️11. What are the types of dependency injection? And which one do you prefer??
+
+## ➡️12. What is the role of @Configuration and @Bean annotations?
+
+## ➡️13. How does dependency injection work in Spring Framework?
