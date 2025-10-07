@@ -14,6 +14,8 @@
 
 ## ➡️ 6. How does Spring Boot manage properties (application.properties, application.yml)?
 
+- What is the difference between application.properties and application.yml?
+
 ## ➡️ 7. What is Spring Boot Actuator and its use cases?
 
 ## ➡️ 8. Difference between embedded servers (Tomcat, Jetty, Undertow) in Spring Boot.
@@ -21,3 +23,5 @@
 ## ➡️ 9. How do you implement Spring Boot profiles for multiple environments?
 
 ## ➡️ 10. How do you create a REST API in Spring Boot (annotations: @RestController, @RequestMapping)?
+
+## ➡️ 11. @Transactional → what it really does
