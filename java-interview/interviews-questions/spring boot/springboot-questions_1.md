@@ -2,6 +2,8 @@
 
 # ⏺️ Spring Boot
 
+## ➡️ What is spring boot lifecylce.
+
 ## ➡️ What is Spring Boot? How is it different from Spring?
 
 ## ➡️ What are Spring Boot starters and why are they useful?
