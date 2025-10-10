@@ -59,11 +59,3 @@ RequestMethod.DELETE).
 - **25. @RequestBody:** Binds the HTTP request body to a method parameter in a controller (usually for JSON payload).
 
 - **26. @ResponseBody:** Indicates that the return value of the method should be written directly to the HTTP response body (used in REST controllers). 27. @ModelAttribute: Used to bind request parameters to a model object, often used in forms
-
-## ⏺️ Important Questions
-
-### ➡️ How transaction annotation works?
-
-### ➡️ Q: @RequestScope vs @SessionScope use case?
-
-A: RequestScope → new bean per HTTP request (e.g., request metadata). SessionScope → tied to user session (e.g., shopping cart).

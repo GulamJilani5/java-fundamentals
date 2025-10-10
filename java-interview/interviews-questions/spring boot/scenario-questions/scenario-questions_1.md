@@ -26,4 +26,6 @@ but logs look fine. What's your next step?" Looking for: Ability to reproduce is
 
 Looking for: Containerization basics, config/ environment issues, readiness/liveness probes, networking.
 
-## ➡️ 7 "A batch job that processes 1M records fails halfway with no clear error. How do you fix it?" Looking for: Retry strategies, idempotency, chunking, monitoring.
+## ➡️ 7 "A batch job that processes 1M records fails halfway with no clear error. How do you fix it?"
+
+Looking for: Retry strategies, idempotency, chunking, monitoring.
