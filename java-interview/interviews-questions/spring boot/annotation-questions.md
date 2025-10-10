@@ -62,4 +62,8 @@ RequestMethod.DELETE).
 
 ## ⏺️ Important Questions
 
-### ➡️ 3. How transaction annotation works?
+### ➡️ How transaction annotation works?
+
+### ➡️ Q: @RequestScope vs @SessionScope use case?
+
+A: RequestScope → new bean per HTTP request (e.g., request metadata). SessionScope → tied to user session (e.g., shopping cart).
