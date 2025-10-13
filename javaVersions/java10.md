@@ -1,3 +1,5 @@
+🔵🟢🔴➡️⭕🟠🟦🟣🟥🟧✔️ ☑️ • ‣ → ⁕ ⏺️
+
 # var
 
 - The type is obvious from the right-hand side, e.g., var list = new ArrayList<String>();

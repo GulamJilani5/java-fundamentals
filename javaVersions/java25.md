@@ -1,3 +1,5 @@
+🔵🟢🔴➡️⭕🟠🟦🟣🟥🟧✔️ ☑️ • ‣ → ⁕ ⏺️
+
 # Java 25 Versions
 
 ## Java Language Enhancements
