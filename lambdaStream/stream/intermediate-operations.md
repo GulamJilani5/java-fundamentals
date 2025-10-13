@@ -12,12 +12,52 @@
 - **Type-safe:** Can change the stream's element type (e.g., `Integer` to `String`).
 - Lazy: Applies transformation only when needed.
 
+- **way 1**
+
 ```java
     List<Integer> numbers = Arrays.asList(3, 1, 4, 1, 5, 9, 2, 6);
     List<Integer> squared = numbers.stream()
         .map(n -> n * n)  // Square each number
         .collect(Collectors.toList());
     System.out.println(squared);  // Output: [9, 1, 16, 1, 25, 81, 4, 36]
+```
+
+- **way 2**
+  - Use **forEach** to Print Each Squared Number on a New Line
+
+```java
+import java.util.*;
+
+numbers.stream()
+    .map(n -> n * n)
+    .forEach(System.out::println);  // Output:
+                                    // 9
+                                    // 1
+                                    // 16
+                                    // 1
+                                    // 25
+                                    // 81
+                                    // 4
+                                    // 36
+```
+
+- **way 3**
+  - Use **forEach** with Custom Formatting (**e.g.**, "Squared: X")
+
+```java
+import java.util.*;
+
+numbers.stream()
+    .map(n -> n * n)
+    .forEach(n -> System.out.println("Squared: " + n));  // Output:
+                                                         // Squared: 9
+                                                         // Squared: 1
+                                                         // Squared: 16
+                                                         // Squared: 1
+                                                         // Squared: 25
+                                                         // Squared: 81
+                                                         // Squared: 4
+                                                         // Squared: 36
 ```
 
 ### ➡️`flatMap(Function)`
