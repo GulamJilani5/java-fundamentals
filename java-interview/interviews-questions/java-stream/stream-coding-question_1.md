@@ -6,4 +6,6 @@
 
 ## ➡️ 3. “Write a Java Stream API one-liner to remove duplicates, sort by string length (descending), take top 2 elements, and join them with a comma.”
 
-## ➡️ 4. What is the difference between Optional.map() and Optional.flatMap()?
+## ➡️ How to group data using Collectors
+
+## ➡️ How to handle optional and null values in stream pipelines
