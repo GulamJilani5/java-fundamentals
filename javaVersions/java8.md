@@ -4,7 +4,15 @@
 
 ## ➡️ Lambda Expressions:
 
+- `D:\Jilani\learning\java-fundamentals\lambdaStream\lambda.md`
+
 ## ➡️ Stream API:
+
+- `D:\Jilani\learning\java-fundamentals\lambdaStream\stream`
+
+## ➡️ Default Methods in Interfaces:
+
+## ➡️ Method References:
 
 ## ➡️ Optional Class:
 
@@ -57,11 +65,7 @@
 - **ifPresentOrElse(Consumer<? super T> action, Runnable emptyAction) (Java 9+):**
   - Executes the action if a value is present, or the `emptyAction` if empty.
 
-## ➡️ Default Methods in Interfaces:
-
 ## ➡️ Date and Time API
-
-## ➡️ Method References:
 
 ## ➡️ Parallel Streams:
 
