@@ -240,10 +240,10 @@ public class Example {
 }
 ```
 
-##### 🔵 <T> T orElseThrow()🔴
+##### 🔵 <T> T orElseThrow()🔴🔴🔴
 
 - Returns the value if present; otherwise throws a `NoSuchElementException.` (Note: The generic <T> in the signature is likely a formatting error; it's T `orElseThrow()`).
-- Similar to get(), but without generics in the method name for the return type.
+- Similar to `get()`, but without generics in the method name for the return type.
 - Enforces handling absence via exceptions, useful in imperative code where failure is expected.
 - Throws a standard exception for empty cases.
 
@@ -263,6 +263,23 @@ public class Example {
         }
     }
 }
+```
+
+- `orElseThrow(...)` (Most commonly used in **service layer**)🔴🔴
+
+```java
+User user = userRepository.findById(id)
+    .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
+
+```
+
+- OR We can also use custom exceptions for better error handling:
+
+```java
+// // With custom exception
+ User user = userRepository.findById(id)
+    .orElseThrow(() -> new UserNotFoundException(id));
+
 ```
 
 ##### 🔵 <T> T orElseThrow(Supplier<? extends X> exceptionSupplier)🔴
@@ -289,52 +306,6 @@ public class Example {
                 System.out.println("Custom Exception: " + e.getMessage());
                 // Output: Custom Exception: Name cannot be null
             }
-        }
-    }
-```
-
-### 🟦 Conditional Execution🔴
-
-##### 🔵 ifPresent(Consumer<? super T> consumer):
-
-- If a value is present, invokes the specified `consumer` with the value; otherwise does nothing.
-- Executes side-effects (**e.g.**, `logging`, `printing`) only if present, avoiding null checks.
-- Encourages functional style by passing actions as lambdas.
-- No return value; purely for execution.
-
-```java
-import java.util.Optional;
-import java.util.function.Consumer;
-
-public class Example {
-    public static void main(String[] args) {
-        Optional<String> optionalName = Optional.of("Alice");
-
-        optionalName.ifPresent(name -> System.out.println("Hello, " + name)); // Output: Hello, Alice
-        // If empty, no output
-    }
-}
-```
-
-##### 🔵 ifPresentOrElse(Consumer<? super T> action, Runnable emptyAction) (Java 9+):
-
-- If a value is present, invokes the action with the value; otherwise invokes the emptyAction. (Introduced in **Java 9**).
-- Handles both present and empty cases in one method, reducing branching.
-- Supports side-effects for both scenarios, like logging success or absence.
-- Improves readability for complete conditional execution.
-
-```java
-    import java.util.Optional;
-    import java.util.function.Consumer;
-
-    public class Example {
-        public static void main(String[] args) {
-            Optional<String> optionalName = Optional.empty();
-
-            optionalName.ifPresentOrElse(
-                name -> System.out.println("Hello, " + name),
-                () -> System.out.println("No name provided")  // Output: No name provided
-            );
         }
     }
 ```
