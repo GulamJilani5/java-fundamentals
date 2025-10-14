@@ -74,7 +74,17 @@ public class Example {
     }
 ```
 
-### 🟦 Checking Presence
+#### 🟥 Checking Presence vs Conditional Execution
+
+| **Aspect**       | **Checking Presence**                 | **Conditional Execution**                |
+| ---------------- | ------------------------------------- | ---------------------------------------- |
+| **Purpose**      | Inspect and return boolean status     | Execute code conditionally               |
+| **Return Type**  | `boolean`                             | `void` (no return value)                 |
+| **Usage Style**  | Imperative (e.g., `if (isPresent())`) | Functional (e.g., `ifPresent(consumer)`) |
+| **Side Effects** | None (pure query)                     | Yes (runs provided actions)              |
+| **Best For**     | Simple checks before acting           | Direct handling without `if`-blocks      |
+
+### 🟦 Checking Presence🔴
 
 ##### 🔵 boolean isPresent()
 
@@ -118,6 +128,52 @@ public class Example {
 }
 ```
 
+### 🟦 Conditional Execution🔴
+
+##### 🔵 ifPresent(Consumer<? super T> consumer):
+
+- If a value is present, invokes the specified `consumer` with the value; otherwise does nothing.
+- Executes side-effects (**e.g.**, `logging`, `printing`) only if present, avoiding null checks.
+- Encourages functional style by passing actions as lambdas.
+- No return value; purely for execution.
+
+```java
+import java.util.Optional;
+import java.util.function.Consumer;
+
+public class Example {
+    public static void main(String[] args) {
+        Optional<String> optionalName = Optional.of("Alice");
+
+        optionalName.ifPresent(name -> System.out.println("Hello, " + name)); // Output: Hello, Alice
+        // If empty, no output
+    }
+}
+```
+
+##### 🔵 ifPresentOrElse(Consumer<? super T> action, Runnable emptyAction) (Java 9+):
+
+- If a value is present, invokes the action with the value; otherwise invokes the emptyAction. (Introduced in **Java 9**).
+- Handles both present and empty cases in one method, reducing branching.
+- Supports side-effects for both scenarios, like logging success or absence.
+- Improves readability for complete conditional execution.
+
+```java
+    import java.util.Optional;
+    import java.util.function.Consumer;
+
+    public class Example {
+        public static void main(String[] args) {
+            Optional<String> optionalName = Optional.empty();
+
+            optionalName.ifPresentOrElse(
+                name -> System.out.println("Hello, " + name),
+                () -> System.out.println("No name provided")  // Output: No name provided
+            );
+        }
+    }
+```
+
 ### 🟦 Accessing the Value
 
 ##### 🔵 T get()
@@ -142,7 +198,7 @@ public class Example {
     }
 ```
 
-##### 🔵 T orElse(T other)
+##### 🔵 T orElse(T other)🔴
 
 - Returns the value if present; otherwise returns the specified default value `other`.
 - Provides a fallback value without exceptions, making it safe for null-like scenarios.
@@ -162,7 +218,7 @@ public class Example {
 }
 ```
 
-##### 🔵 T orElseGet(Supplier<? extends T> supplier)
+##### 🔵 T orElseGet(Supplier<? extends T> supplier)🔴
 
 - Returns the value if present; otherwise invokes the `Supplier` and returns its result.
 - Lazily evaluates the fallback (supplier is called only if empty), improving performance for expensive computations.
@@ -184,7 +240,7 @@ public class Example {
 }
 ```
 
-##### 🔵 <T> T orElseThrow()
+##### 🔵 <T> T orElseThrow()🔴
 
 - Returns the value if present; otherwise throws a `NoSuchElementException.` (Note: The generic <T> in the signature is likely a formatting error; it's T `orElseThrow()`).
 - Similar to get(), but without generics in the method name for the return type.
@@ -209,7 +265,7 @@ public class Example {
 }
 ```
 
-##### 🔵 <T> T orElseThrow(Supplier<? extends X> exceptionSupplier)
+##### 🔵 <T> T orElseThrow(Supplier<? extends X> exceptionSupplier)🔴
 
 - Returns the value if present; otherwise throws the exception produced by the `exceptionSupplier`. (Note: The `<T>` is part of the generic return type; `X` is the exception type)
 - Allows custom exceptions instead of the default `NoSuchElementException`.
@@ -237,7 +293,7 @@ public class Example {
     }
 ```
 
-### 🟦 Conditional Execution
+### 🟦 Conditional Execution🔴
 
 ##### 🔵 ifPresent(Consumer<? super T> consumer):
 
@@ -254,8 +310,8 @@ public class Example {
     public static void main(String[] args) {
         Optional<String> optionalName = Optional.of("Alice");
 
-        optionalName.ifPresent(name -> System.out.println("Hello, " + name));
-        // Output: Hello, Alice
+        optionalName.ifPresent(name -> System.out.println("Hello, " + name)); // Output: Hello, Alice
+        // If empty, no output
     }
 }
 ```
