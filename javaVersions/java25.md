@@ -2,9 +2,11 @@
 
 # Java 25 Versions
 
-## Java Language Enhancements
+### Structured Concurrency
 
 ### Module Import Declarations
+
+## Java Language Enhancements
 
 ### Primitive Types in Patterns
 
@@ -15,8 +17,6 @@
 ## Core Java Library
 
 ### Stable Values
-
-### Structured Concurrency
 
 ### Vector API
 

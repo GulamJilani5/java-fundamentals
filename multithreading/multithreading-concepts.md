@@ -1,3 +1,5 @@
+✔️🟦🟣🔵🟢🔴🟡🟠➡️⭕🟠⬛🟩🟪🟫 ➡️ ⏺️ ••‣⁎⁕⁜※⁂
+
 ## ➡️ 1. Threads and the Thread Class
 
 - Understand what threads are and how to create them using the Thread class or by implementing the Runnable interface.

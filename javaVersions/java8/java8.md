@@ -18,6 +18,8 @@
 
 ## ➡️ Parallel Streams:
 
+## ➡️ CompletableFuture
+
 ## ➡️ Nashorn JavaScript Engine:
 
 ## ➡️ Type Annotations:

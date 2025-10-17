@@ -1,3 +1,5 @@
+✔️🟦🟣🔵🟢🔴🟡🟠➡️⭕🟠⬛🟩🟪🟫 ➡️ ⏺️ ••‣⁎⁕⁜※⁂
+
 ### Thread Basics
 
 - Thread
@@ -7,6 +9,8 @@
 - Thread LifeCycle
 - Thread Pool
 
-### Virtual Thread
-
 ### Executor Service
+
+### Future vs CompletableFuture and Structured Concurrency(StructuredTaskScope)
+
+### Virtual Thread
