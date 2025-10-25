@@ -1,8 +1,14 @@
 # Four Pillars of OOP
 
-### Encapsulation
+### Encapsulation - Hiding complexity and exposing essentials
+
+- Encapsulation isn’t just marking variables private or protected.
+- Think of driving a car 👇
+  - → You don’t need to know how the engine burns fuel or how the wiring works.
+  - → You just use a simple interface: start, steer, accelerate, brake, stop.
 - Bundling data (attributes) and methods that operate on that data within a single unit (class).
 - Hiding internal details and exposing only what's necessary (through access modifiers like public, private, protected).
+
 ```java
 class Vehicle {
     private String model;  // Private field (hidden)
@@ -28,8 +34,14 @@ class Vehicle {
 ```
 
 ### Abstraction
+
+- A movie on IMDB isn’t the same as a movie on a Booking App
+  - → IMDB cares about title, cast, ratings, and reviews.
+  - → A booking app cares about showtimes, price, and seat availability.
+  - Abstraction sums up to: same entity, different context, showing only what’s relevant.
 - Showing only essential features while hiding implementation details.
 - Creating simple models of complex reality.
+
 ```java
 abstract class Vehicle {
     abstract void start();  // Abstract method (no implementation)
@@ -54,8 +66,10 @@ class Car extends Vehicle {
 ```
 
 ### Inheritance
+
 - Creating new classes (child/derived classes) from existing ones (parent/base classes).
 - Promotes code reuse and establishes relationships between classes.
+
 ```java
 class Vehicle {  // Parent class
     void move() {
@@ -79,12 +93,15 @@ public class Main {
 ```
 
 ### Polymorphism
+
 - Ability of objects to take on many forms ("poly" = many, "morph" = form).
 - Same method name can behave differently in different classes.
 - Achieved through method overriding and interfaces.
 
 ##### a) Method Overriding (Runtime Polymorphism)
+
 - Same method (sound()) behaves differently based on the actual object type (dynamic binding).
+
 ```java
 class Vehicle {
     void sound() {
@@ -118,7 +135,9 @@ public class Main {
 ```
 
 ##### b) Method Overloading (Compile-Time Polymorphism)
+
 - Same method name (add), but different parameters.
+
 ```java
 class Calculator {
     int add(int a, int b) {
