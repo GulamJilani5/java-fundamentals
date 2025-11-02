@@ -1,4 +1,4 @@
-🔵🟢🔴➡️⭕🟠🟦🟣🟥🟧✔️ ☑️ • ‣ → ⁕ ⏺️
+⏺️ ➡️ 🟦 🔵🟢🔴➡️⭕🟠🟦🟣🟥🟧✔️ ☑️ • ‣ → ⁕
 
 # ⏺️ Answers
 
@@ -14,3 +14,60 @@
 - **.equals()** is overridden in `value-based classes` where logical equality is more useful than reference equality.
 - **Common ones that overrides .equals():** String, all wrapper classes of Primitives, collections, enums.
 - In your own classes, you override it if you want two different objects with the same field values to be considered "equal".
+
+## ➡️ Serialization vs Marker Interface
+
+### 🟦 Serialization
+
+- Serializable is a **Marker Interface** from `java.io` package.
+- **Serialization** means converting an object into a byte stream (a series of bytes) so it can be:
+
+  - Saved to a file or database, or
+  - Transferred over a network.
+
+- Later, it can be **deserialized** — converted back from the byte stream into the original Java object.
+
+```java
+  import java.io.*;
+
+class Employee implements Serializable {
+    int id;
+    String name;
+
+    public Employee(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+
+public class TestSerialization {
+    public static void main(String[] args) throws Exception {
+        Employee emp = new Employee(101, "Gulam");
+
+        // Serialize (write object to file)
+        FileOutputStream fos = new FileOutputStream("emp.ser");
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        oos.writeObject(emp);
+        oos.close();
+
+        // Deserialize (read object from file)
+        FileInputStream fis = new FileInputStream("emp.ser");
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        Employee e = (Employee) ois.readObject();
+        ois.close();
+
+        System.out.println(e.id + " " + e.name);
+    }
+}
+
+```
+
+### 🟦 Marker Interface
+
+- A Marker Interface is an interface that has no methods or fields — it’s used to mark a class with metadata that gives special behavior to the JVM or compiler.
+
+  | Marker Interface | Purpose                                                         |
+  | ---------------- | --------------------------------------------------------------- |
+  | `Serializable`   | Marks that the object can be serialized                         |
+  | `Cloneable`      | Marks that object can be cloned using `clone()`                 |
+  | `Remote`         | Marks that object can be used in RMI (Remote Method Invocation) |

@@ -23,3 +23,7 @@
 ## Comparator vs Comparable
 
 - find answer `D:\Jilani\learning\java-fundamentals\javaVersions\java8\comparable-vs-comparator.md`
+
+## Serialization vs Marker Interface
+
+- Find Answer `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\core-java\core-java-answer_1.md`
