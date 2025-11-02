@@ -12,9 +12,9 @@
 - It defines a simple contract:
 
 ```java
-public interface Executor {
-void execute(Runnable command);
-}
+    public interface Executor {
+    void execute(Runnable command);
+    }
 ```
 
 - That’s it! - It just represents something that can run your tasks — it doesn’t say how.
@@ -26,9 +26,9 @@ void execute(Runnable command);
 - Executors is a factory class that helps you create different types of ExecutorService implementations (thread pools).
 
 ```java
-Executors.newFixedThreadPool(3);
-Executors.newCachedThreadPool();
-Executors.newSingleThreadExecutor();
+    Executors.newFixedThreadPool(3);
+    Executors.newCachedThreadPool();
+    Executors.newSingleThreadExecutor();
 ```
 
 - Internally, all of these return a `ThreadPoolExecutor`, pre-configured for specific behaviors.
