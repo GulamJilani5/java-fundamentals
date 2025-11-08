@@ -10,7 +10,7 @@
 
 - These accumulate elements into standard collections.
 
-### 🟦 toList()
+### 🟦 1. toList()
 
 - Collects all elements into a mutable `ArrayList`. It's the most common way to get a `List` from a stream.
 - Duplicates are preserved, and order is maintained.
@@ -25,7 +25,7 @@ List<String> result = stream.collect(Collectors.toList());
 System.out.println(result); // Output: [apple, banana, cherry, date]
 ```
 
-### 🟦 toSet()
+### 🟦 2. toSet()
 
 - Collects unique elements into a mutable `HashSet`. Duplicates are automatically removed, and order is not guaranteed (uses hash-based ordering).
 
@@ -35,7 +35,7 @@ Set<String> result = stream.collect(Collectors.toSet());
 System.out.println(result); // Output: [apple, banana, date] (order may vary)
 ```
 
-### 🟦 toUnmodifiableList() (Available since Java 10)
+### 🟦 3. toUnmodifiableList() (Available since Java 10)
 
 - Collects elements into an immutable `List` (backed by an array). It's like `toList()` but throws `UnsupportedOperationException` on modification attempts, useful for thread-safe or API-returning lists.
 
@@ -51,7 +51,7 @@ System.out.println(result);
 
 - These transform elements into keys/values for structured results.
 
-### 🟦 toMap(keyMapper, valueMapper)
+### 🟦 1. toMap(keyMapper, valueMapper)
 
 - Collects into a HashMap<K, V>, where each element is mapped to a key (via keyMapper) and value (via valueMapper).
 - Keys must be unique; if duplicates occur, you can provide a merge function as a third parameter (**e.g.**, `toMap(keyMapper, valueMapper, (existing, replacement) -> replacement)`).
@@ -73,7 +73,7 @@ System.out.println(result);
 
 - For concatenating or joining text.
 
-### 🟦 joining(CharSequence delimiter) (or joining(delimiter, prefix, suffix))
+### 🟦 1. joining(CharSequence delimiter) (or joining(delimiter, prefix, suffix))
 
 - Concatenates string elements into a single **String**, separated by a delimiter.
 - **Optional** prefix/suffix can wrap the result. Non-string streams require a map to strings first.
@@ -89,7 +89,7 @@ System.out.println(result);
 
 - These perform aggregations like sums or averages on numeric values (often after mapping to primitives).
 
-### 🟦 summingInt(ToIntFunction<? super T> mapper)
+### 🟦 1. summingInt(ToIntFunction<? super T> mapper)
 
 - **Maps** each element to an int (via mapper) and returns the sum as an `Integer`.
 - Useful for totaling numeric properties; handles overflow by wrapping around.
@@ -101,7 +101,7 @@ System.out.println(result);
     // Output: 6
 ```
 
-### 🟦 counting()
+### 🟦 2. counting()
 
 - Returns the total number of elements in the stream as a `Long`. It's a simple reducer; no mapper needed.
 
@@ -112,7 +112,7 @@ System.out.println(result);
     // Output: 4
 ```
 
-### 🟦 averagingInt(ToIntFunction<? super T> mapper)
+### 🟦 3. averagingInt(ToIntFunction<? super T> mapper)
 
 - `Maps` each element to an int and returns the arithmetic mean as a Double. Returns `NaN` for empty streams.
 
@@ -127,7 +127,7 @@ System.out.println(result);
 
 - These organize elements into maps based on criteria.
 
-### 🟦 groupingBy(Function<? super T, ? extends K> classifier) (or with downstream collector, e.g., groupingBy(classifier, toList()))
+### 🟦 1. groupingBy(Function<? super T, ? extends K> classifier) (or with downstream collector, e.g., groupingBy(classifier, toList()))
 
 - Groups elements by a key produced by classifier, resulting in a Map<K, List<T>> (or custom downstream like `toSet()`). Handles multiple levels with nested collectors.
 - Think of `groupingBy` like sorting items into buckets based on a rule.
@@ -141,7 +141,7 @@ System.out.println(result);
 
 ```
 
-### 🟦 partitioningBy(Predicate<? super T> predicate) (or with downstream)
+### 🟦 2. partitioningBy(Predicate<? super T> predicate) (or with downstream)
 
 - Partitions elements into a `Map<Boolean, List<T>>` based on a boolean predicate (true/false keys). It's a special case of grouping for binary splits; can include downstream collectors for sub-aggregations.
 - `partitioningBy` is just like grouping, but only two buckets:
