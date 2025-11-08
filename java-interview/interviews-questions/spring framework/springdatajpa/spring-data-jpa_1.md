@@ -14,6 +14,8 @@
 
 ## ➡️ Explain the different types of entity relationships in Hibernate/JPA: @OneToOne, @OneToMany @ManyToOne, @ManyToMany (Provide examples for each.)
 
+## What are Cascade types in JPA?
+
 ## ➡️ Lazy loading vs Eager loading
 
 ## ➡️ Explain lazy loading and how to avoid LazylnitializationException.
