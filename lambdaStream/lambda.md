@@ -12,7 +12,7 @@ An abstract class is a class that cannot be instantiated. It can have abstract m
 and concrete methods (with body).
 ### ➡️Key Features:
 - Can have constructors.
-- Can have instance variables.
+- Can have instance variables. 
 - Can have both abstract and non-abstract methods.
 - Supports inheritance.
 - Allows code reuse via concrete methods.
