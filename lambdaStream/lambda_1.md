@@ -1,21 +1,32 @@
-# Interface
+⏺️ ➡️ 🟦 🔵 🟢🔴⭕🟠🟣🟥🟧✔️ ☑️ • ‣ → ⁕
+
+# ⏺️ Interface vs Abstract class
+
+- **Interface** = `contract → what a class must do → supports multiple inheritance → now allows default & static methods`.
+- **Abstract Class** = `partial implementation → shared behavior + state → constructor supported → single inheritance.`
+
+### ➡️ Interface
 
 An interface in Java is a reference type that defines a contract: a set of methods that must be implemented
 by any class that claims to "implement" it.
 
-### ➡️Key Features:
+#### 🟦 Key Features:
 
-- **until Java 7:** `Only abstract methods`
-- **From Java 8+:** `default methods (with body)`, `static methods`
-- **From Java 9+:** `private methods` allowed
+- **until Java 7:**
+  - only abstract methods (implicitly public & abstract)
+- **From Java 8+:**
+  - default methods (with body)
+  - static methods
+- **From Java 9+:**
+  - private methods allowed
 - Cannot have constructors or instance variables (except public static final constants)
 
-# Abstract Class
+### ➡️ Abstract Class
 
 An abstract class is a class that cannot be instantiated. It can have abstract methods (without body)
 and concrete methods (with body).
 
-### ➡️Key Features:
+#### 🟦 Key Features:
 
 - Can have constructors.
 - Can have instance variables.
