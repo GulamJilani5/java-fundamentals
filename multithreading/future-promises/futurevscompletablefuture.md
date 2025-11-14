@@ -38,6 +38,7 @@
 
 ## ➡️ CompletableFuture
 
+- `CompletableFuture` in Java is very similar to Promises in JavaScript.
 - java 8, `java.util.concurrent`
 - asynchronous, non-blocking, and declarative programming.
 - Java doesn’t have `await` syntax but `CompletableFuture` offers a **Promise-like API** with callback chaining and composition
