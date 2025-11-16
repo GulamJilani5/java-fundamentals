@@ -27,3 +27,5 @@
 ## ➡️12. What is the role of @Configuration and @Bean annotations?
 
 ## ➡️13. How does dependency injection work in Spring Framework?
+
+Explain optimistic vs pessimistic locking - @Version annotation and use cases.
