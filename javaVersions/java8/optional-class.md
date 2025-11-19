@@ -265,11 +265,13 @@ public class Example {
 }
 ```
 
-- `orElseThrow(...)` (Most commonly used in **service layer**)🔴🔴
+- **service layer in spring boot** - `orElseThrow(...)` (Most commonly used in **service layer**)🔴🔴
 
 ```java
-User user = userRepository.findById(id)
-    .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
+  public User getUser(Long id) {
+    return userRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("User not found :"  + id));
+}
 
 ```
 
@@ -279,6 +281,20 @@ User user = userRepository.findById(id)
 // // With custom exception
  User user = userRepository.findById(id)
     .orElseThrow(() -> new UserNotFoundException(id));
+```
+
+- **one real-world case where Optional is used as a parameter**
+
+```java
+   public User updateUser(Long id, Optional<String> name, Optional<String> city) {
+    User user = userRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Not found"));
+
+    name.ifPresent(user::setName);
+    city.ifPresent(user::setCity);
+
+    return userRepository.save(user);
+}
 
 ```
 
