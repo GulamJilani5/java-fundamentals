@@ -18,13 +18,9 @@
 - Arrays.asList(null)
 - null element
 
-`
-
 ### Arrays.asList() → update elements, but can't resize.
 
 - safe, truly immutable.
-
-⏺🔵🟢🔴➡️⭕🟠🟦🟣🟥🟧✔️ ☑️ • ‣ → ⁕ ⏺️
 
 ## ➡️ 4. Explain HashMap internal working (hashing, collision handling, load factor).
 
