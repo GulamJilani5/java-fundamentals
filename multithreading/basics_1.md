@@ -1,6 +1,6 @@
-🔵🟢🔴➡️⭕🟠🟦🟣🟥🟧✔️⏺️ ☑️ • ‣ → ⁕
+⏺️ ➡️ 🟦 🔵 🟢🔴➡️⭕🟠🟣🟥🟧✔️ ☑️ • ‣ → ⁕
 
-# ➡️ 1. Threads, Runnable, Callable, Thread Pool, Future
+# ⏺️ 1. Threads, Runnable, Callable, Thread Pool, Future
 
 ## 🟦 Threads
 
