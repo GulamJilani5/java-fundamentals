@@ -45,8 +45,8 @@
 
 ### ➡️ Maps.
 
-- Maps (e.g., HashMap, TreeMap) do not implement the Collection interface, so they cannot be directly converted to streams.
-- Instead, use their view methods (keySet(), values(), or entrySet()) to get a Collection view, then call stream() on that view.
+- Maps (e.g., `HashMap`, `TreeMap`) do not implement the Collection interface, so they cannot be directly converted to streams.
+- Instead, use their view methods (`keySet()`, `values()`, or `entrySet()`) to get a Collection view, then call **stream()** on that view.
 
 #### 🟦 Streaming keys(map.keySet().stream())
 
@@ -90,6 +90,9 @@ Map<String, Integer> map = new HashMap<>();
 
 #### 🟦 Arrays.stream(array)
 
+- Primitive type array
+- Each elements directly stored in continuously in memory.
+
 ```java
         String[] array = {"apple", "banana", "cherry"};
         Stream<String> stream = Arrays.stream(array);  // Stream from array
@@ -97,6 +100,9 @@ Map<String, Integer> map = new HashMap<>();
 ```
 
 #### 🟦 Stream.of(array)
+
+- Object type array
+- Each elements are stored references(address/pointer)
 
 ```java
         String[] array = {"apple", "banana", "cherry"};

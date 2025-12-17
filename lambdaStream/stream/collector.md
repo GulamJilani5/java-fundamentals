@@ -39,6 +39,7 @@
 | mergeFunction | What to do if key repeats |
 | mapSupplier   | Which Map to create       |
 
+- Arguments order is must be the same.
 - Return type Map<K, V>.
 - Convert stream → key-value structure.
 
