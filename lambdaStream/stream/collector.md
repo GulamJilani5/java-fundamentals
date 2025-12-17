@@ -70,7 +70,6 @@ Map<Integer, String> map =
                  Employee::getSalary,
                  Integer::max   // merge function
              ));
-
 ```
 
 - **4 arguments**
@@ -111,13 +110,13 @@ Map<String, Integer> map =
      ));
 ```
 
-- **2 arguments**
+- ** 2 arguments**
 
   - groupingBy(classifier, downstream)
 
-- This code is valid
+- This code is valid ⭕
 
-```java
+```java ⭕
  Map<String, Long> map =
     employees.stream()
              .collect(Collectors.groupingBy(
@@ -127,10 +126,10 @@ Map<String, Integer> map =
 
 ```
 
-- This is not valid
+- This is not valid ❌
 - `Collectors.groupingBy` does not have an overload that takes exactly two arguments where the second is a map supplier (like LinkedHashMap::new).
 
-```java
+```java ❌
   Map<String, Long> map = employees.stream()
     .collect(Collectors.groupingBy(
         Employee::getDepartment,     // classifier
