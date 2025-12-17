@@ -153,6 +153,8 @@ Map<String, Integer> map =
 
 ### 🟦1.5 partitioningBy()
 
+- Return type Map<Boolean, List<T>>
+
 - **1 argument**
   - partitioningBy(predicate)
 

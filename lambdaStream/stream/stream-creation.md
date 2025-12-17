@@ -1,6 +1,6 @@
-🔵🟢🔴➡️⭕🟠🟦🟣🟥🟧✔️ ☑️ • ‣ → ⁕ ⏺️
+⏺️ ➡️ 🟦 🔵 🟢🔴⭕🟠🟣🟥🟧✔️ ☑️ • ‣ → ⁕
 
-# ⏺️ Stream Creation / Converting to Stream (Source)
+# ⏺️ Stream Creation / Converting to Stream (from Source data structure)
 
 - **Java Streams** do not modify the original data source. They operate on a **view** of the data, processing it functionally and immutably. The original collection (**e.g.**, `List`, `Set`) remains unchanged after the stream pipeline finishes.
 - If we try to modify the source during stream processing (e.g., via a loop), it can lead to `ConcurrentModificationException`.
@@ -8,50 +8,25 @@
 
 ### ➡️ From Collections
 
-### 🟦 collection.stream()
+- `collection.stream()`
 
-##### 🔵 List (e.g., ArrayList)
+#### 🟦 List (e.g., ArrayList)
 
-```java
-        List<String> list = new ArrayList<>();
-        list.add("apple");
-        list.add("banana");
-        list.add("apple");  // Duplicates allowed
+- `list.stream()`
 
-        Stream<String> stream = list.stream();  // Sequential stream from List
-        stream.forEach(System.out::println);
-```
+#### 🟦 Set (e.g., HashSet)
 
-##### 🔵 Set (e.g., HashSet)
-
+- set.stream()
 - **Sets** do not allow duplicates and have no guaranteed order (unless using **LinkedHashSet** or **TreeSet**).
 
-```java
-        Set<String> set = new HashSet<>();
-        set.add("apple");
-        set.add("banana");
-        set.add("apple");  // Duplicate ignored
+#### 🟦 Queue (e.g., LinkedList as Queue)
 
-        Stream<String> stream = set.stream();  // Sequential stream from Set
-        stream.forEach(System.out::println);
-```
-
-##### 🔵 Queue (e.g., LinkedList as Queue)
-
+- queue.stream()
 - **Queues** follow **FIFO** (First-In-First-Out) order.
 
-```java
-    Queue<String> queue = new LinkedList<>();
-    queue.offer("apple");
-    queue.offer("banana");
-    queue.offer("cherry");
+#### 🟦 Deque (e.g., ArrayDeque)
 
-    Stream<String> stream = queue.stream();  // Sequential stream from Queue
-    stream.forEach(System.out::println);
-```
-
-##### 🔵 Deque (e.g., ArrayDeque)
-
+- deque.stream()
 - **Deques** support insertion/removal from both ends (double-ended queue).
 
 ```java
@@ -64,11 +39,16 @@
     stream.forEach(System.out::println);
 ```
 
-##### 🔵 Maps.
+### ➡️ collection.parallelStream()
+
+- **List**, **Set**, **Queue**, **Deque** and **Map** (as collections) can all be converted to **parallelStream()** in the exact same way as **stream()**
+
+### ➡️ Maps.
 
 - Maps (e.g., HashMap, TreeMap) do not implement the Collection interface, so they cannot be directly converted to streams.
 - Instead, use their view methods (keySet(), values(), or entrySet()) to get a Collection view, then call stream() on that view.
-- **Streaming keys(map.keySet().stream())**
+
+#### 🟦 Streaming keys(map.keySet().stream())
 
 ```java
 Map<String, Integer> map = new HashMap<>();
@@ -81,7 +61,7 @@ Map<String, Integer> map = new HashMap<>();
 
 ```
 
-- **Streaming Values: map.values().stream()**
+#### 🟦 Streaming Values: map.values().stream()
 
 ```java
    Map<String, Integer> map = new HashMap<>();
@@ -93,7 +73,7 @@ Map<String, Integer> map = new HashMap<>();
     valueStream.forEach(System.out::println);
 ```
 
-- **Streaming Entries: map.entrySet().stream()**
+#### 🟦 Streaming Entries: map.entrySet().stream()
 
 ```java
 Map<String, Integer> map = new HashMap<>();
@@ -106,13 +86,9 @@ Map<String, Integer> map = new HashMap<>();
     // Output: apple: 1 banana: 2 cherry: 3 (order may vary)
 ```
 
-### 🟦 collection.parallelStream()
-
-- **List**, **Set**, **Queue**, **Deque** and **Map** (as collections) can all be converted to **parallelStream()** in the exact same way as **stream()**
-
 ### ➡️ From Arrays
 
-### 🟦 Arrays.stream(array)
+#### 🟦 Arrays.stream(array)
 
 ```java
         String[] array = {"apple", "banana", "cherry"};
@@ -120,7 +96,7 @@ Map<String, Integer> map = new HashMap<>();
         stream.forEach(System.out::println);
 ```
 
-### 🟦 Stream.of(array)
+#### 🟦 Stream.of(array)
 
 ```java
         String[] array = {"apple", "banana", "cherry"};
@@ -129,6 +105,30 @@ Map<String, Integer> map = new HashMap<>();
 ```
 
 - **Arrays.stream(array)** can all be converted to **parallelStream()** in the exact same way as **stream()**
+
+### ➡️ From Values Creating Collections (then Stream)
+
+#### 🟦 Arrays.asList(...)
+
+- Can update elements(set index) but can not add/remove element like size can not be changed.
+
+```java
+  List<String> list = Arrays.asList("apple", "banana", "cherry");
+  list.stream()
+    .forEach(System.out::println);
+
+```
+
+#### 🟦 List.of(...) (Java 9+) Preferred
+
+- Truly immutable, add/remove/update is not possible.
+
+```java
+  List<String> list = List.of("apple", "banana", "cherry");
+  list.stream()
+    .forEach(System.out::println);
+
+```
 
 ### ➡️ From Values
 
