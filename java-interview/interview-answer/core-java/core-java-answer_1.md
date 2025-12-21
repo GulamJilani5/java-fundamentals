@@ -15,6 +15,37 @@
 - **Common ones that overrides .equals():** String, all wrapper classes of Primitives, collections, enums.
 - In your own classes, you override it if you want two different objects with the same field values to be considered "equal".
 
+## ➡️ Immutable Class
+
+- An immutable class in Java is a class whose objects cannot be modified after creation.
+  - Once an object is initialized, its state never changes
+  - Any “change” results in a new object, not modification of the existing one
+
+### 🟦 Why Immutable Classes Matter
+
+- Thread-Safe by Design
+- Easier to Reason & Debug
+- Safe for Hash-Based Collections(`hashCode()` remains consistent)
+  - HashMap keys
+  - HashSet elements
+- Prevents Accidental Data Modification
+
+### 🟦 Classic Examples of Immutable Classes
+
+- String, Integer, Long, LocalDate, LocalDateTime
+
+### 🟦 Rules to Create a Custom Immutable Class
+
+- Declare the Class as final
+  - Prevents subclassing
+  - Subclasses could add setters or mutable behavior
+- Make All Fields private and final
+  - **private** → no external modification
+  - **final** → assigned only once
+- Do NOT Provide Setter Methods
+- Initialize Fields Using Constructor Only
+- Return Defensive Copies for Mutable Fields
+
 ## ➡️ Serialization vs Marker Interface
 
 ### 🟦 Serialization

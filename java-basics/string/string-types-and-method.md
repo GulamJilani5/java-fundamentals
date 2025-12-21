@@ -16,6 +16,7 @@
 
 - Stored in heap memory outside the String pool.
 - Creates a new object, even if the same value exists.
+- Truly immutable
 
 ### 🔵 String Literal's Methods
 

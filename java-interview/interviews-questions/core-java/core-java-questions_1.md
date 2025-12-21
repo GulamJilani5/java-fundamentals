@@ -14,11 +14,23 @@
 
 - Find Answer `D:\Jilani\learning\java-fundamentals\java-interview\interview-answer\core-java\core-java-answer_4.md`
 
-## ➡️ 3. isNull vs isPresent
+## ➡️ isNull vs isPresent
 
-## ➡️ 4. why are strings immutable in java
+## ➡️ what are What is immutable class in java
 
-## ➡️ 7. Difference between abstract class and interface in Java.
+-
+
+## ➡️ Why are strings immutable in java
+
+- Find Answer `D:\Jilani\learning\java-fundamentals\java-basics\string\string-types-and-method.md`
+
+## ➡️ What will happen if hashCode() is overridden but not equals()?
+
+## ➡️ Comparator vs Comparable
+
+## ➡️ Key features introduced in Java 8
+
+## ➡️ Key features introduced in Java 17
 
 ## Comparator vs Comparable
 
