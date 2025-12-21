@@ -99,16 +99,28 @@ public non-sealed class Triangle extends Shape {
 | `final`      | Prevents further subclassing                    |
 | `non-sealed` | Lifts restrictions, allowing anyone to extend   |
 
-### ➡️Pattern Matching for instanceof (Finalized):🟠
+### ➡️ Pattern Matching for instanceof (Finalized):🟠
 
-### ➡️Vector API (Second Incubator):
+```java
+ if(obj instance String s){
+    System.out.println(s.length);
+ }
+```
 
-### ➡️Foreign Function & Memory API (Incubator):
+### ➡️ Record Class 🟠
 
-### ➡️Restore Always-Strict Floating-Point Semantics:
+### ➡️ Shenandoah Garbage Collector (Production-Ready):🟠
 
-### ➡️Shenandoah Garbage Collector (Production-Ready):🟠
+- ZGC garbage collection (15-20% faster in prod).
 
-### ➡️Deprecate AOT and JIT Compilation:
+### ➡️ Switch Expression Enhanced
 
-### ➡️New macOS Rendering Pipeline:
+### ➡️ Vector API (Second Incubator):
+
+### ➡️ Foreign Function & Memory API (Incubator):
+
+### ➡️ Restore Always-Strict Floating-Point Semantics:
+
+### ➡️ Deprecate AOT and JIT Compilation:
+
+### ➡️ New macOS Rendering Pipeline:
