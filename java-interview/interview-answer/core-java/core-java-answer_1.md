@@ -11,9 +11,13 @@
 | **Default**     | Reference equality        | Reference equality (unless overridden) |
 | **Override?**   | Cannot override           | Can override in a class                |
 
-- **.equals()** is overridden in `value-based classes` where logical equality is more useful than reference equality.
-- **Common ones that overrides .equals():** String, all wrapper classes of Primitives, collections, enums.
-- In your own classes, you override it if you want two different objects with the same field values to be considered "equal".
+- If any class overrides **.equals()** method then it will compare content only otherwise comparing the referencs.
+- String, Integer, Double and all wrapper classes of Primitives, collections, enums overrrides **.equals** so they compares by content not reference.
+- Our **Custom Class** must override **.equals()** in order to compare by contents not reference.
+
+### 🟦 **hashCode()**
+
+- **hashCode()** is following the exactly same as **.equals()**
 
 ## ➡️ Immutable Class
 

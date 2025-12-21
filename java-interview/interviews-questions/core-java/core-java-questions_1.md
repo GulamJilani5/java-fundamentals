@@ -26,6 +26,8 @@
 
 ## ➡️ What will happen if hashCode() is overridden but not equals()?
 
+- Find Answer `D:\Jilani\learning\java-fundamentals\java-basics\string\string-types-and-method.md`
+
 ## ➡️ Comparator vs Comparable
 
 ## ➡️ Key features introduced in Java 8
