@@ -2,7 +2,7 @@
 
 # ⏺️ Interface, functional interface vs Abstract class
 
-- **Interface** = `contract → what a class must do → supports multiple inheritance → now allows default & static methods`.
+- **Interface** = `contract → what a class must do → supports multiple inheritance → now allows default, static & private methods`.
 - **Abstract Class** = `partial implementation → shared behavior + state → constructor supported → single inheritance.`
 
 ## ➡️ Interface
