@@ -7,11 +7,17 @@ Java 21, an LTS release, introduced significant concurrency and expressiveness i
 
 ### ➡️ Virtual Threads (Finalized):🟠🟠🟠
 
+### ➡️ Structured Concurrency (Preview):
+
+```java
+
+```
+
 ### ➡️ Record Patterns (Finalized):🟠
 
-### ➡️ Pattern Matching for switch (Finalized):
+- Find `D:\Jilani\learning\java-fundamentals\javaVersions\java17.md`
 
-### ➡️ Unnamed Patterns & Variables(Preview)
+### ➡️ Pattern Matching for switch (Finalized):
 
 ### ➡️ Sequenced Collections(Finalized)::🟠
 
@@ -42,7 +48,7 @@ Java 21, an LTS release, introduced significant concurrency and expressiveness i
 - Ensures no duplicates and maintains order
 - Typical implementation: `LinkedHashSet`
 
-### ➡️ Structured Concurrency (Preview):
+### ➡️ Unnamed Patterns & Variables(Preview)
 
 ### ➡️ Vector API (Finalized):
 
