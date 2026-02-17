@@ -27,6 +27,7 @@
 ## ➡️ What will happen if hashCode() is overridden but not equals()?
 
 - Find Answer `D:\Jilani\learning\java-fundamentals\java-basics\string\string-types-and-method.md`
+- Find Asnwer `D:\Jilani\learning\java-fundamentals\java-basics\java-concepts\java-concepts-3.md`
 
 ## ➡️ Comparator vs Comparable
 
