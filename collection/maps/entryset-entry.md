@@ -1,6 +1,6 @@
 ⏺️ ➡️ 🟦 🔵 🟢🔴⭕🟠🟣🟥🟧✔️ ☑️ • ‣ → ⁕
 
-# ⏺️ entrySet & Set<Map.Entry<K, V>>
+# ⏺️ entrySet == Set<Map.Entry<K, V>>
 
 ## ➡️ entrySet()
 
@@ -10,6 +10,7 @@
 - `entrySet()` makes a **Map** iterable.
 
 ```java
+
   for (Map.Entry<String, Integer> e : map.entrySet()) {
     System.out.println(e.getKey() + " = " + e.getValue());
 }
@@ -43,7 +44,6 @@ map.put(2, "Bob");
 
 - `Map.Entry` is a nested interface inside **Map** that represents **one key–value** pair in a Map
 - A **Map** stores data like - `key  → value`
-
   - Each single row inside a **Map** is represented as a **Map.Entry** object.
 
 - **Example Map**

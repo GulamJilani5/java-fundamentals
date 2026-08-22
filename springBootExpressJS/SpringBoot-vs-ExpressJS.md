@@ -1,6 +1,6 @@
 ⏺️ ➡️ 🟦 🔵 🟢🔴⭕🟠🟣🟥🟧✔️ ☑️ • ‣ → ⁕
 
-# Spring Boot And Expressjs(nodejs) Folder structure Comparison
+# ⏺️ Spring Boot And Expressjs(nodejs) Folder structure Comparison
 
 | Spring Boot   | ExpressJS Equivalent                                                   |
 | ------------- | ---------------------------------------------------------------------- |
@@ -15,7 +15,7 @@
 | Service    | `@Service`                     | Business logic                                                                                                 |
 | Model/ORM  | `@Repository`, JPA Entity      | DB interaction                                                                                                 |
 
-## Example Folder Structure in ExpressJS:
+### ➡️ Example Folder Structure in ExpressJS:
 
 | Folder / File                   | Purpose / Role                                                                      |
 | ------------------------------- | ----------------------------------------------------------------------------------- |
@@ -25,7 +25,7 @@
 | `models/userModel.js`           | Defines DB schema and interacts with the database (using Mongoose, Sequelize, etc.) |
 | `middlewares/authMiddleware.js` | Handles cross-cutting concerns (e.g., authentication, logging, error handling)      |
 
-### How They Work Together
+### ➡️ How They Work Together
 
     •Routes → define URL paths
     •Middleware → sits before controllers, can block or allow the request
@@ -33,32 +33,34 @@
     •Service → runs the business logic
     •Model → interacts with the database
 
-### Example Flow
+### ➡️ Example Flow
 
-##### A `GET /users/:id` request would flow like:
+##### 🟦 `GET /users/:id` request would flow like:
 
-✅ **Client Request**  
- ↓  
-➡️ **Route** (`userRoutes.js`)  
- → Matches the endpoint and attaches middleware + controller  
- ↓  
-➡️ **Middleware** (`authMiddleware.js`, etc.)  
- → CORS / Authenticates / logs / modifies request  
- ↓  
-➡️ **Controller** (`userController.js`)  
- → Handles the request:  
-&nbsp;&nbsp;&nbsp;&nbsp;•Calls the appropriate **Service** function  
-&nbsp;&nbsp;&nbsp;&nbsp;•Gets data back  
-&nbsp;&nbsp;&nbsp;&nbsp;•**...This controller sends the response**  
- ↓  
-➡️ **Service** (`userService.js`)  
- → Contains business logic  
-&nbsp;&nbsp;&nbsp;&nbsp;•Calls the appropriate **Model** for DB operations  
- ↓  
-➡️ **Model** (`userModel.js`)  
- → Interacts with the **database**  
- ↓  
-➡️ **Database**  
- → Returns data to Model → Service → Controller  
- ↓  
+```text
+✅ **Client Request**
+ ↓
+➡️ **Route** (`userRoutes.js`)
+ → Matches the endpoint and attaches middleware + controller
+ ↓
+➡️ **Middleware** (`authMiddleware.js`, etc.)
+ → CORS / Authenticates / logs / modifies request
+ ↓
+➡️ **Controller** (`userController.js`)
+ → Handles the request:
+&nbsp;&nbsp;&nbsp;&nbsp;•Calls the appropriate **Service** function
+&nbsp;&nbsp;&nbsp;&nbsp;•Gets data back
+&nbsp;&nbsp;&nbsp;&nbsp;•**...This controller sends the response**
+ ↓
+➡️ **Service** (`userService.js`)
+ → Contains business logic
+&nbsp;&nbsp;&nbsp;&nbsp;•Calls the appropriate **Model** for DB operations
+ ↓
+➡️ **Model** (`userModel.js`)
+ → Interacts with the **database**
+ ↓
+➡️ **Database**
+ → Returns data to Model → Service → Controller
+ ↓
 ✅ **Controller sends the response back to the client...**
+```
